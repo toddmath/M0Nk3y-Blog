@@ -3,7 +3,21 @@ title: Other GatsbyJS starters
 menuTitle: Starters
 ---
 
-**HeroBlog** is not my first [GatsbyJS](https://www.gatsbyjs.org/) starter.
+**M0Nk3y WebDev** started off as a [GatsbyJS](https://www.gatsbyjs.org/) starter that I ended up modiying to better suite my style and needs. Here's a couple examples of [Gatsby.js starters](https://www.gatsbyjs.org/starters/?v=2):
+
+### gatsby-starter-blog
+
+![gatsby-starter-blog](./gatsby-starter-blog.png)
+
+Bare bones, official starter blog. Not a lot of :bell:'s and whistles, but a great introduction and **blank canvas**.
+[Demo](https://gatsby-starter-default-demo.netlify.com/) | [Github repo](https://github.com/gatsbyjs/gatsby-starter-default)
+
+### gatsby-material-starter
+
+![gatsby-material-starter](gatsby-material-starter.png)
+
+Nice looking starter, uses Material styling. Some nice features such as SASS, Google Analytics, SEO, etc.
+[Demo](https://vagr9k.github.io/gatsby-material-starter/) | [Github repo](https://github.com/Vagr9K/gatsby-material-starter)
 
 ### PersonalBlog
 

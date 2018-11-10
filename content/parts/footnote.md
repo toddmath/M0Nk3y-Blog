@@ -2,7 +2,7 @@
 title: footnote
 ---
 
-- Full-stack blog [M0Nk3y WebDev](https://toddmath.github.io)
+- Full-stack blog [M0Nk3y WebDev](https://toddmath.com)
 - Built by [Todd Matheson](https://www.twitter.com/tM0Nk3y)
 - Check out [my GitHub profile](https://github.com/toddmath)
 - Delivered by [Netlify](https://www.netlify.com/)
