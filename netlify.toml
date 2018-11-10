@@ -1,0 +1,9 @@
+[build]
+    publish = "public/"
+    command = "gatsby build"
+
+[[redirects]]
+    from = "https://toddmath.netlify.com/*"
+    to = "https://toddmath.com/:splat"
+    status = 301!
+    force = false
