@@ -112,12 +112,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 2em`
             }
           },
-          {
-            resolve: "gatsby-remark-prismjs",
-            options: {
-              aliases: {sh: "bash"},
-            }
-          },
+          `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
@@ -265,6 +260,12 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         include: /svg-icons/
+      }
+    },
+    {
+      resolve: "gatsby-plugin-netlify",
+      options: {
+        createRedirect({ fromPath:: "https://toddmath.netlify.com/*", toPath: "https://toddmath.com/:splat", status: "301" })
       }
     }
   ]

@@ -1602,14 +1602,6 @@ aws4@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
 
-axios@^0.17.1:
-  version "0.17.1"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.17.1.tgz#2d8e3e5d0bdbd7327f91bc814f5c57660f81824d"
-  integrity sha1-LY4+XQvb1zJ/kbyBT1xXZg+Bgk0=
-  dependencies:
-    follow-redirects "^1.2.5"
-    is-buffer "^1.1.5"
-
 axios@^0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
@@ -5585,7 +5577,7 @@ follow-redirects@^1.0.0:
   dependencies:
     debug "^3.1.0"
 
-follow-redirects@^1.2.5, follow-redirects@^1.3.0:
+follow-redirects@^1.3.0:
   version "1.5.9"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.9.tgz#c9ed9d748b814a39535716e531b9196a845d89c6"
   integrity sha512-Bh65EZI/RU8nx0wbYF9shkFZlqLP+6WT/5FnA3cE/djNSuKNHJEinGGZgu/cQEkeeb2GdFOgenAmn8qaqYke2w==
@@ -5802,6 +5794,32 @@ gatsby-cli@^2.4.3:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
+gatsby-cli@^2.4.5:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.4.5.tgz#a3fc171067cfac9a3e131a6765160748c59c0a22"
+  integrity sha512-r1s79aXjPgur561UuBi8iTvGr+VIxqzKRBWYNxuWQADC352LGk/j5qTFdwC/jgfIQDE0Ue7hWC9UM1LYntdVcw==
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@babel/runtime" "^7.0.0"
+    bluebird "^3.5.0"
+    common-tags "^1.4.0"
+    convert-hrtime "^2.0.0"
+    core-js "^2.5.0"
+    envinfo "^5.8.1"
+    execa "^0.8.0"
+    fs-exists-cached "^1.0.0"
+    fs-extra "^4.0.1"
+    hosted-git-info "^2.6.0"
+    lodash "^4.17.10"
+    opentracing "^0.14.3"
+    pretty-error "^2.1.1"
+    resolve-cwd "^2.0.0"
+    source-map "^0.5.7"
+    stack-trace "^0.0.10"
+    update-notifier "^2.3.0"
+    yargs "^11.1.0"
+    yurnalist "^0.2.1"
+
 gatsby-image@^2.0.5:
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.9.tgz#ed5feebb4749530e5d53436ebfbec409253e1493"
@@ -5819,15 +5837,6 @@ gatsby-link@^2.0.4:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
     ric "^1.3.0"
-
-gatsby-node-helpers@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-node-helpers/-/gatsby-node-helpers-0.3.0.tgz#3bdca3b7902a702a5834fef280ad66d51099d57c"
-  integrity sha1-O9yjt5AqcCpYNP7ygK1m1RCZ1Xw=
-  dependencies:
-    json-stringify-safe "^5.0.1"
-    lodash "^4.17.4"
-    p-is-promise "^1.1.0"
 
 gatsby-plugin-algolia@^0.1.0:
   version "0.1.0"
@@ -6080,15 +6089,6 @@ gatsby-remark-smartypants@^2.0.5:
     retext "^5.0.0"
     retext-smartypants "^3.0.0"
     unist-util-visit "^1.3.0"
-
-gatsby-source-cosmicjs@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/gatsby-source-cosmicjs/-/gatsby-source-cosmicjs-0.0.6.tgz#eb9a4909104663fbca9322f40bc47008762480de"
-  integrity sha512-QWVMoqv+pqmGRrRjSPhBDZgAM9iflL6p0UCXVYwt6ap+lCgtaKVmSVyXgPtuz0RKcDgKRh50dFw8pfMHB4w7Qg==
-  dependencies:
-    axios "^0.17.1"
-    gatsby-node-helpers "^0.3.0"
-    lodash "^4.17.4"
 
 gatsby-source-filesystem@^2.0.1:
   version "2.0.1"
