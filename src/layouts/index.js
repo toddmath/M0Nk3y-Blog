@@ -1,3 +1,4 @@
+// @ts-nocheck
 import "typeface-open-sans";
 import FontFaceObserver from "fontfaceobserver";
 import PropTypes from "prop-types";
@@ -7,7 +8,6 @@ import { graphql, StaticQuery } from "gatsby";
 import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
 import Footer from "../components/Footer/";
 import Header from "../components/Header";
-import Transition from "../components/Transition/transition"
 
 export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
@@ -123,7 +123,6 @@ class Layout extends React.Component {
                     />
                     <main>{children}</main>
                     <Footer html={footnoteHTML} theme={this.state.theme} />
-                    <Transition location={location}>{children}</Transition>
 
                     {/* --- STYLES --- */}
                     <style jsx>{`

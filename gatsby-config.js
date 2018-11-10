@@ -113,7 +113,7 @@ module.exports = {
             }
           },
           {
-            resoleve: "gatsby-remark-prismjs",
+            resolve: "gatsby-remark-prismjs",
             options: {
               aliases: {sh: "bash"},
             }
