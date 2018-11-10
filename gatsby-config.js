@@ -264,9 +264,6 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-netlify",
-      options: {
-        createRedirect({ fromPath: "https://toddmath.netlify.com/*", toPath: "https://toddmath.com/:splat", status: "301" })
-      }
     }
   ]
 };
