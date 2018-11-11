@@ -23,7 +23,7 @@ My name is Todd Matheson. I'm a 32 year old aspiring front-end / full-stack web 
 - **Favicons** `script` generator
 - Easy customizable base styles via `theme` object generated from `yaml` config
 - **React** _v.16_ (gatsby-plugin-react-next)
-- **Components** lazy loaded
+- **Components** lazy loadedbbr
 - **ESLint** _google config_
 - **Prettier** code styling
 - **Webpack** (_BundleAnalyzerPlugin_)

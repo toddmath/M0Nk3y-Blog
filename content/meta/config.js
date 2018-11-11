@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: "M0Nk3y Webdev", // <title>
   shortSiteTitle: "M0Nk3y WebDev - FullStack BaddAssary!", // <title> ending for posts and pages
   siteDescription: "M0Nk3y WebDev is a blog on full stack development.",
-  siteUrl: "https://toddmath.github.io",
+  siteUrl: "https://toddmath.com",
   // pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
@@ -13,7 +13,7 @@ module.exports = {
 
   /* info */
   headerTitle: "Todd Matheson",
-  headerSubTitle: "",
+  headerSubTitle: "M0Nk3y WebDev",
 
   /* manifest.json */
   manifestName: "M0Nk3y Webdev - a full stack blog",

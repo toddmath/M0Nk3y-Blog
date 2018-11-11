@@ -150,8 +150,8 @@ module.exports = {
         start_url: config.manifestStartUrl,
         background_color: config.manifestBackgroundColor,
         theme_color: config.manifestThemeColor,
-        display: config.manifestDisplay,
-        icons: [
+        display: config.manifestDisplay
+        /** icons: [
           {
             src: "/icons/icon-48x48.png",
             sizes: "48x48",
@@ -187,7 +187,40 @@ module.exports = {
             sizes: "512x512",
             type: "image/png"
           }
-        ]
+        ] */
+      }
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/favicon.png",
+
+        // WebApp Manifest Configuration
+        appName: config.manifestName, // Inferred with your package.json
+        appDescription: siteDescription,
+        developerName: authorName,
+        developerURL: null,
+        dir: "auto",
+        lang: "en-US",
+        background: manifestBackgroundColor,
+        theme_color: manifestThemeColor,
+        display: config.manifestDisplay,
+        orientation: "any",
+        start_url: manifestStartUrl,
+        version: "1.0",
+
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: true,
+          favicons: true,
+          firefox: true,
+          opengraph: false,
+          twitter: true,
+          yandex: false,
+          windows: true
+        }
       }
     },
     `gatsby-plugin-offline`,
@@ -263,7 +296,7 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-netlify",
+      resolve: "gatsby-plugin-netlify"
     }
   ]
 };
