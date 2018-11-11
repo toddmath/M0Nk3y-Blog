@@ -67,12 +67,13 @@ font:
   # font options
   family:
     initial: "Arial, sans-serif"
+    target: &font-family-target "Alegreya"
     # Trebuchet-based sans serif stack
-    target: &font-family-target "Segoe UI, Candara, Bitstream Vera Sans, DejaVu Sans, Bitstream Vera Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif"
+    # target: &font-family-target "Segoe UI, Candara, Bitstream Vera Sans, #DejaVu Sans, Bitstream Vera Sans, Trebuchet MS, Verdana, Verdana Ref, #sans-serif"
     # target: &font-family-target "Open Sans, Avenir Next, Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif"
   weight:
     standard: 400
-    bold: 600
+    bold: 700
   size:
     xxs: &font-size-xs .8em
     xs: &font-size-xs .95em

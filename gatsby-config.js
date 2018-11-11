@@ -223,6 +223,14 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: ["Alegreya"]
+        }
+      }
+    },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-analytics`,
