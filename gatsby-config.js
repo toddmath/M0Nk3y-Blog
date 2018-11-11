@@ -197,16 +197,16 @@ module.exports = {
 
         // WebApp Manifest Configuration
         appName: config.manifestName, // Inferred with your package.json
-        appDescription: siteDescription,
-        developerName: authorName,
+        appDescription: config.siteDescription,
+        developerName: config.authorName,
         developerURL: null,
         dir: "auto",
         lang: "en-US",
-        background: manifestBackgroundColor,
-        theme_color: manifestThemeColor,
+        background: config.manifestBackgroundColor,
+        theme_color: config.manifestThemeColor,
         display: config.manifestDisplay,
         orientation: "any",
-        start_url: manifestStartUrl,
+        start_url: config.manifestStartUrl,
         version: "1.0",
 
         icons: {
