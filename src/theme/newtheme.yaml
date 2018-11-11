@@ -67,7 +67,8 @@ font:
   # font options
   family:
     initial: "Arial, sans-serif"
-    target: &font-family-target "Alegreya"
+    target: &font-family-target "Alegreya, serif"
+    targetHeadings: &font-family-target-heading "Righteous, cursive"
     # Trebuchet-based sans serif stack
     # target: &font-family-target "Segoe UI, Candara, Bitstream Vera Sans, #DejaVu Sans, Bitstream Vera Sans, Trebuchet MS, Verdana, Verdana Ref, #sans-serif"
     # target: &font-family-target "Open Sans, Avenir Next, Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif"
@@ -116,7 +117,7 @@ text:
     tablet: 650px
     desktop: 700px
 heading:
-  family: *font-family-target
+  family: *font-family-target-heading
   size:
     h1: *font-size-xl
     h2: *font-size-l
@@ -125,16 +126,16 @@ heading:
     h1: *font-line-height-xs
     h2: *font-line-height-xs
     h3: *font-line-height-xs
-  weight: 600
+  weight: 400
 line:
-  color: *color-gray-3
+  color: *color-gray-1
 icon:
   color: *color-brand-primary
 
 # COMPONENT TOKENS
 hero:
   h1:
-    size: *font-size-xxl
+    size: *font-size-xxxl
     color: *color-white
     lineHeight: *font-line-height-xs
   background: "linear-gradient(0deg, #2D609B, #233FCF)"
