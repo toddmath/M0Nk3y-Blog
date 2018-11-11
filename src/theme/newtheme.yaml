@@ -135,7 +135,7 @@ icon:
 # COMPONENT TOKENS
 hero:
   h1:
-    size: *font-size-xxxl
+    size: *font-size-xxl
     color: *color-white
     lineHeight: *font-line-height-xs
   background: "linear-gradient(0deg, #2D609B, #233FCF)"
