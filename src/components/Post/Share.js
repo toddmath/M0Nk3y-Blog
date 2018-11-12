@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {
+  RedditShareButton,
+  EmailShareButton,
   FacebookShareButton,
   GooglePlusShareButton,
   LinkedinShareButton,
@@ -8,10 +10,13 @@ import {
   FacebookShareCount,
   GooglePlusShareCount,
   LinkedinShareCount,
+  RedditShareCount,
   FacebookIcon,
   TwitterIcon,
   GooglePlusIcon,
-  LinkedinIcon
+  LinkedinIcon,
+  RedditIcon,
+  EmailIcon
 } from "react-share";
 
 import config from "../../../content/meta/config";
@@ -77,10 +82,33 @@ const PostShare = props => {
             }}
           >
             <LinkedinIcon round size={iconSize} />
+          </LinkedinShareButton>
             <LinkedinShareCount url={url}>
               {count => <div className="share-count">{filter(count)}</div>}
             </LinkedinShareCount>
-          </LinkedinShareButton>
+          
+          <RedditShareButton
+            url={url}
+            title={title}
+            additionalProps={{
+              "aria-label": "Reddit share"
+            }}
+          >
+            <RedditIcon round size={iconSize} />
+          </RedditShareButton>
+            <RedditShareCount url={url}>
+            {count => <div className="share-count">{filter(count)}</div>}/>
+            </RedditShareCount>
+
+            <EmailShareButton
+              url={url}
+              subject={title}
+              additionalProps={{
+                "aria-label": "Email share"
+              }}
+            >
+            <EmailIcon round size={iconSize} />
+            </EmailShareButton>
         </div>
       </div>
 

@@ -1,7 +1,5 @@
 // @ts-nocheck
 import "typeface-open-sans";
-// import "typeface-montserrat";
-// import "typeface-poppins";
 import FontFaceObserver from "fontfaceobserver";
 import PropTypes from "prop-types";
 import React from "react";
