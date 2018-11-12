@@ -15265,9 +15265,24 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
+typeface-merriweather@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.54.tgz#a6b694d93c7ac432e26e8d7797a19afe83844186"
+  integrity sha512-K3DOVMCE/KNapWBJ8vW15G44JSl7OVVr2mfy8cuZfY8ZDSiqGKF+Pk1VB/lD7TRaLJlmV11ytwoQ8z+3Z+2n4g==
+
+typeface-montserrat@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.54.tgz#3fc338db6428d73485b75aa7bd2af8c9a55b9ab3"
+  integrity sha512-Typhap0PWT299+Va0G/8ZtycHMXrH4gBWKfiW977KEBx5rXUUCa70gvqLx1fdA0WAo6bhSAQmo8uc+QFAmjPww==
+
 typeface-open-sans@^0.0.54:
   version "0.0.54"
   resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.54.tgz#20f5b5ea5c7f95d89dc1f8b2d2b1457680129cee"
+
+typeface-poppins@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-poppins/-/typeface-poppins-0.0.54.tgz#58c90da107a14db1e359f4d339cb2cc8e098d37b"
+  integrity sha512-VQyXtQJdr4jxHIyZWR6SkBjkqf5opHF4cx5C7A48mfL60ahYLN2fGtsN9qAgJ6YyRvOLpDn64czfn+/tWwSE/g==
 
 ua-parser-js@^0.7.18:
   version "0.7.18"

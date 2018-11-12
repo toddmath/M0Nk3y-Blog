@@ -1,5 +1,7 @@
 // @ts-nocheck
 import "typeface-open-sans";
+import "typeface-montserrat";
+import "typeface-poppins";
 import FontFaceObserver from "fontfaceobserver";
 import PropTypes from "prop-types";
 import React from "react";
@@ -28,9 +30,8 @@ class Layout extends React.Component {
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont("font400", "Righteous", 400);
-      this.loadFont("font400", "Permanent Marker", 400);
-      this.loadFont("font400", "Alegreya", 400);
+      this.loadFont("font400", "montserrat", 400);
+      this.loadFont("font600", "poppins", 600);
     }
   }
 
@@ -144,16 +145,16 @@ class Layout extends React.Component {
                       }
                       body {
                         font-family: ${this.state.font400loaded
-                          ? "Alegreya, serif;"
-                          : "Arial, sans-serif;"};
+                          ? "typeface-montserrat, serif;"
+                          : "open-sans, sans-serif;"};
                       }
                       h1,
                       h2,
                       h3 {
-                        font-family: ${this.state.font400loaded
-                        ? "Permanent Marker, cursive;"
-                        : "Arial, sans-serif;"};
-                        font-weight: ${this.state.font400loaded ? 400 : 400};
+                        font-family: ${this.state.font600loaded
+                          ? "poppins, sans-serif;"
+                          : "Arial, sans-serif;"};
+                        font-weight: ${this.state.font400loaded ? 600 : 400};
                         line-height: 1.1;
                         letter-spacing: -0.03em;
                         margin: 0;
@@ -165,7 +166,7 @@ class Layout extends React.Component {
                         margin: 0;
                       }
                       strong {
-                        font-weight: ${this.state.font400loaded ? 700 : 400};
+                        font-weight: ${this.state.font600loaded ? 600 : 400};
                       }
                       a {
                         text-decoration: none;

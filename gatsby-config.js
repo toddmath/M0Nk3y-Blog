@@ -227,7 +227,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ["Alegreya, serif", "Allerta Stencil, sans-serif", "Permanent Marker, cursive", "Righteous, cursive"]
+          families: ['Montserrat', 'Poppins']
         }
       }
     },
