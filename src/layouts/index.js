@@ -31,7 +31,7 @@ class Layout extends React.Component {
 
     if (typeof window !== `undefined`) {
       this.loadFont("font400", "Alegreya", 400);
-      this.loadFont("font600", "Permanent Marker", 400);
+      this.loadFont("font600", "Montserrat", 700);
     }
   }
 
@@ -152,9 +152,9 @@ class Layout extends React.Component {
                       h2,
                       h3 {
                         font-family: ${this.state.font600loaded
-                          ? "Permanent Marker, cursive;"
+                          ? "Montserrat, sans-serif;"
                           : "Arial, sans-serif;"};
-                        font-weight: ${this.state.font600loaded ? 600 : 600};
+                        font-weight: ${this.state.font600loaded ? 700 : 600};
                         line-height: 1.1;
                         letter-spacing: -0.03em;
                         margin: 0;
@@ -166,7 +166,7 @@ class Layout extends React.Component {
                         margin: 0;
                       }
                       strong {
-                        font-weight: ${this.state.font600loaded ? 600 : 600};
+                        font-weight: ${this.state.font600loaded ? 700 : 600};
                       }
                       a {
                         text-decoration: none;
