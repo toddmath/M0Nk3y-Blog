@@ -215,7 +215,7 @@ const Item = props => {
               }
               :global(.arrow) {
                 opacity: 1;
-                stroke: ${theme.color.special.attention};
+                stroke: ${theme.color.brand.primary};
                 transform: translateX(0);
               }
             }
@@ -224,8 +224,8 @@ const Item = props => {
             }
             :global(.arrow) {
               display: inline-block;
-              fill: ${theme.color.special.attention};
-              stroke: ${theme.color.special.attention};
+              fill: ${theme.color.brand.primary};
+              stroke: ${theme.color.brand.primary};
               stroke-width: 40;
               stroke-linecap: round;
               opacity: 0;

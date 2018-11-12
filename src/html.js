@@ -11,7 +11,7 @@ export default class HTML extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           {this.props.headComponents}
           <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="#D0E0D8" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="#255DC6" />
           <meta name="apple-mobile-web-app-title" content="Lazywill" />
           <link rel="apple-touch-icon" href="/icons/apple-icon-57x57.png" sizes="57x57" />
           <link rel="apple-touch-icon" href="/icons/apple-icon-60x60.png" sizes="60x60" />

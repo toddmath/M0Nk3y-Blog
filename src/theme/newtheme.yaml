@@ -69,6 +69,7 @@ font:
     initial: "Arial, sans-serif"
     target: &font-family-target "Alegreya, serif"
     targetHeading: &font-family-target-heading "Montserrat, sans-serif"
+    targetBlogHeading: &font-family-target-blog-heading "Exo 2, sans-serif"
     # Trebuchet-based sans serif stack
     # target: &font-family-target "Segoe UI, Candara, Bitstream Vera Sans, #DejaVu Sans, Bitstream Vera Sans, Trebuchet MS, Verdana, Verdana Ref, #sans-serif"
     # target: &font-family-target "Open Sans, Avenir Next, Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif"
@@ -142,10 +143,10 @@ hero:
   background: "linear-gradient(0deg, #2D609B, #233FCF)"
 blog:
   h1:
-    family: *font-family-target-heading
+    family: *font-family-target-blog-heading
     size: *font-size-l
     lineHeight: *font-line-height-xs
-    hoverColor: *color-brand-primary
+    hoverColor: *color-special-attention
 header:
   height:
     default: 80px
