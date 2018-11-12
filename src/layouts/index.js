@@ -28,8 +28,9 @@ class Layout extends React.Component {
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont("font400", "Alegreya", 400);
-      this.loadFont("font600", "Alegreya", 700);
+      this.loadFont("font400", "Righteous, cursive", 400);
+      this.loadFont("font400", "Permanent Marker, cursive", 400);
+      this.loadFont("font400", "Alegreya, serif", 400);
     }
   }
 
@@ -143,13 +144,16 @@ class Layout extends React.Component {
                       }
                       body {
                         font-family: ${this.state.font400loaded
-                          ? "'Alegreya';"
+                          ? "Alegreya, serif;"
                           : "Arial, sans-serif;"};
                       }
                       h1,
                       h2,
                       h3 {
-                        font-weight: ${this.state.font700loaded ? 700 : 400};
+                        font-family: ${this.state.font400loaded
+                        ? "Permanent Marker, cursive;"
+                        : "Arial, sans-serif;"};
+                        font-weight: ${this.state.font400loaded ? 400 : 400};
                         line-height: 1.1;
                         letter-spacing: -0.03em;
                         margin: 0;
@@ -161,7 +165,7 @@ class Layout extends React.Component {
                         margin: 0;
                       }
                       strong {
-                        font-weight: ${this.state.font700loaded ? 700 : 400};
+                        font-weight: ${this.state.font400loaded ? 700 : 400};
                       }
                       a {
                         text-decoration: none;
