@@ -28,9 +28,9 @@ class Layout extends React.Component {
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont("font400", "Righteous, cursive", 400);
-      this.loadFont("font400", "Permanent Marker, cursive", 400);
-      this.loadFont("font400", "Alegreya, serif", 400);
+      this.loadFont("font400", "Righteous", 400);
+      this.loadFont("font400", "Permanent Marker", 400);
+      this.loadFont("font400", "Alegreya", 400);
     }
   }
 
