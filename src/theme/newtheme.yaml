@@ -74,7 +74,7 @@ font:
     # target: &font-family-target "Open Sans, Avenir Next, Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif"
   weight:
     standard: 400
-    bold: 700
+    bold: 600
   size:
     xxs: &font-size-xs .8em
     xs: &font-size-xs .95em
@@ -127,7 +127,7 @@ heading:
     h1: *font-line-height-xs
     h2: *font-line-height-xs
     h3: *font-line-height-xs
-  weight: 700
+  weight: 600
 line:
   color: *color-gray-3
 icon:

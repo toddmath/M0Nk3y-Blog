@@ -29,7 +29,7 @@ class Layout extends React.Component {
 
     if (typeof window !== `undefined`) {
       this.loadFont("font400", "Exo", 400);
-      this.loadFont("font600", "Vollkron", 700);
+      this.loadFont("font600", "Vollkorn", 600);
     }
   }
 
@@ -150,9 +150,9 @@ class Layout extends React.Component {
                       h2,
                       h3 {
                         font-family: ${this.state.font600loaded
-                          ? "Vollkron, serif;"
+                          ? "Vollkorn, serif;"
                           : "Arial, sans-serif;"};
-                        font-weight: ${this.state.font600loaded ? 700 : 600};
+                        font-weight: ${this.state.font600loaded ? 600 : 600};
                         line-height: 1.1;
                         letter-spacing: -0.03em;
                         margin: 0;
