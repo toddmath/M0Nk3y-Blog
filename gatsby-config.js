@@ -227,7 +227,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Exo:400:400i:700', 'Vollkorn:700:700i']
+          families: ['Exo', 'Vollkorn']
         }
       }
     },
