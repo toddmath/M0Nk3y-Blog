@@ -147,4 +147,4 @@ gatsby-browser.js
 public/
 
 # Gatsby env file (sensitive api's)
-.env
+
