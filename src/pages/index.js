@@ -94,7 +94,7 @@ export const query = graphql`
               children {
                 ... on ImageSharp {
                   fluid(maxWidth: 800, maxHeight: 360) {
-                    GatsbyImageSharpFluid_withWebp_tracedSVG
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
