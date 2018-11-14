@@ -67,8 +67,8 @@ font:
   # font options
   family:
     initial: "Arial, sans-serif"
-    target: &font-family-target "Source Sans Pro, sans-serif"
-    targetHeading: &font-family-target-heading "Montserrat, serif"
+    target: &font-family-target "Exo, sans-serif"
+    targetHeading: &font-family-target-heading "Vollkron, serif"
     # Trebuchet-based sans serif stack
     # target: &font-family-target "Segoe UI, Candara, Bitstream Vera Sans, #DejaVu Sans, Bitstream Vera Sans, Trebuchet MS, Verdana, Verdana Ref, #sans-serif"
     # target: &font-family-target "Open Sans, Avenir Next, Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif"
