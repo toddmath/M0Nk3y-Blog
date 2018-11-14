@@ -141,3 +141,4 @@ typings/
 
 # FuseBox cache
 .fusebox/
+gatsby-browser.js
