@@ -41,7 +41,7 @@ color:
   neutral:
     white: &color-white "#ffffff"
     gray:
-      a: &color-gray-1 "#c3c3c3"
+      a: &color-gray-1 "#ecebea"
       b: &color-gray-2 "#b6b6b6"
       c: &color-gray-3 "#a9a9a9"
       d: &color-gray-4 "#909090"
@@ -84,6 +84,7 @@ font:
     xl: &font-size-xl 2em
     xxl: &font-size-xl 2.2em
     xxxl: &font-size-xxl 2.8em
+    xxxxl: &font-size-xxxl 3em
   lineHeight:
     xs: &font-line-height-xs 1.1
     s: &font-line-height-s 1.2
@@ -96,7 +97,7 @@ font:
 time:
   duration:
     default: 0.3s
-    long: 0.5s
+    long: 0.8s
 
 # GENERAL TOKENS
 background:
@@ -136,8 +137,8 @@ icon:
 hero:
   h1:
     family: *font-family-target-heading
-    size: *font-size-xxl
-    color: *color-gray-2
+    size: *font-size-xxxl
+    color: *color-gray-1
     lineHeight: *font-line-height-xs
   background: "linear-gradient(0deg, #2D609B, #233FCF)"
 blog:
