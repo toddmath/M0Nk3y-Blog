@@ -20,7 +20,7 @@ module.exports = {
   manifestShortName: "M0Nk3y Blog", // max 12 characters
   manifestStartUrl: "/index.html",
   manifestBackgroundColor: "white",
-  manifestThemeColor: "#666",
+  manifestThemeColor: "#255DC6",
   manifestDisplay: "standalone",
 
   // gravatar

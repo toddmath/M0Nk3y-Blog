@@ -227,7 +227,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Montserrat', 'Poppins', 'Permanent Marker', 'Alegreya', 'Exo 2']
+          families: ['Exo:400:400i:700', 'Vollkorn:700:700i']
         }
       }
     },

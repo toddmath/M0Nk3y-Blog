@@ -67,9 +67,8 @@ font:
   # font options
   family:
     initial: "Arial, sans-serif"
-    target: &font-family-target "Alegreya, serif"
-    targetHeading: &font-family-target-heading "Montserrat, sans-serif"
-    targetBlogHeading: &font-family-target-blog-heading "Exo 2, sans-serif"
+    target: &font-family-target "Exo, sans-serif"
+    targetHeading: &font-family-target-heading "Vollkkorn, serif"
     # Trebuchet-based sans serif stack
     # target: &font-family-target "Segoe UI, Candara, Bitstream Vera Sans, #DejaVu Sans, Bitstream Vera Sans, Trebuchet MS, Verdana, Verdana Ref, #sans-serif"
     # target: &font-family-target "Open Sans, Avenir Next, Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif"
@@ -96,8 +95,8 @@ font:
 #TIME
 time:
   duration:
-    default: 0.5s
-    long: 1s
+    default: 0.3s
+    long: 0.5s
 
 # GENERAL TOKENS
 background:
@@ -127,9 +126,9 @@ heading:
     h1: *font-line-height-xs
     h2: *font-line-height-xs
     h3: *font-line-height-xs
-  weight: 400
+  weight: 700
 line:
-  color: *color-gray-1
+  color: *color-gray-3
 icon:
   color: *color-brand-primary
 
@@ -138,15 +137,15 @@ hero:
   h1:
     family: *font-family-target-heading
     size: *font-size-xxl
-    color: *color-white
+    color: *color-gray-2
     lineHeight: *font-line-height-xs
   background: "linear-gradient(0deg, #2D609B, #233FCF)"
 blog:
   h1:
-    family: *font-family-target-blog-heading
+    family: *font-family-target-heading
     size: *font-size-l
     lineHeight: *font-line-height-xs
-    hoverColor: *color-special-attention
+    hoverColor: *color-gray-2
 header:
   height:
     default: 80px

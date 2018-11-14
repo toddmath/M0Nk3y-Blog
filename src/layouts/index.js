@@ -1,5 +1,5 @@
 // @ts-nocheck
-import "typeface-open-sans";
+// import "typeface-open-sans";
 import FontFaceObserver from "fontfaceobserver";
 import PropTypes from "prop-types";
 import React from "react";
@@ -28,8 +28,8 @@ class Layout extends React.Component {
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont("font400", "Alegreya", 400);
-      this.loadFont("font600", "Montserrat", 700);
+      this.loadFont("font400", "Exo", 400);
+      this.loadFont("font600", "Vollkorn", 700);
     }
   }
 
@@ -143,14 +143,14 @@ class Layout extends React.Component {
                       }
                       body {
                         font-family: ${this.state.font400loaded
-                          ? "Alegreya, serif;"
-                          : "open-sans, sans-serif;"};
+                          ? "Exo, serif;"
+                          : "Arial, sans-serif;"};
                       }
                       h1,
                       h2,
                       h3 {
                         font-family: ${this.state.font600loaded
-                          ? "Montserrat, sans-serif;"
+                          ? "Vollkron, serif;"
                           : "Arial, sans-serif;"};
                         font-weight: ${this.state.font600loaded ? 700 : 600};
                         line-height: 1.1;
