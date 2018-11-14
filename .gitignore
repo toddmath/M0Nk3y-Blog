@@ -142,3 +142,9 @@ typings/
 # FuseBox cache
 .fusebox/
 gatsby-browser.js
+
+# Gatsby build directory (Netlify will handle this)
+public/
+
+# Gatsby env file (sensitive api's)
+.env

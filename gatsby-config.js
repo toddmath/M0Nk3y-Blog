@@ -213,7 +213,7 @@ module.exports = {
           android: true,
           appleIcon: true,
           appleStartup: true,
-          coast: true,
+          coast: false,
           favicons: true,
           firefox: true,
           opengraph: false,
@@ -227,7 +227,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Exo', 'Vollkorn']
+          families: ['Exo', 'Acme']
         }
       }
     },
@@ -235,8 +235,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-        respectDNT: false
+        trackingId: process.env.GOOGLE_ANALYTICS_ID
       }
     },
     {

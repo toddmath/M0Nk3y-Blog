@@ -68,7 +68,7 @@ font:
   family:
     initial: "Arial, sans-serif"
     target: &font-family-target "Exo, sans-serif"
-    targetHeading: &font-family-target-heading "Vollkorn, serif"
+    targetHeading: &font-family-target-heading "Acme, sans-serif"
     # Trebuchet-based sans serif stack
     # target: &font-family-target "Segoe UI, Candara, Bitstream Vera Sans, #DejaVu Sans, Bitstream Vera Sans, Trebuchet MS, Verdana, Verdana Ref, #sans-serif"
     # target: &font-family-target "Open Sans, Avenir Next, Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif"
@@ -96,6 +96,7 @@ font:
 #TIME
 time:
   duration:
+    card: 225ms
     default: 0.3s
     long: 0.8s
 
@@ -109,7 +110,7 @@ text:
   family: *font-family-target
   color:
     primary: *color-gray-10
-    primaryInverse: *color-gray-2
+    primaryInverse: *color-gray-1
     brand: *color-brand-primary
     attention: *color-special-attention
   lineHeight:

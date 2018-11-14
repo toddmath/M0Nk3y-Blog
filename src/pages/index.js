@@ -94,7 +94,7 @@ export const query = graphql`
               children {
                 ... on ImageSharp {
                   fluid(maxWidth: 800, maxHeight: 360) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
@@ -111,17 +111,17 @@ export const query = graphql`
       }
     }
     bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 1200, quality: 90, cropFocus: CENTER) {
+      resize(width: 1200, quality: 50, cropFocus: ATTENTION) {
         src
       }
     }
     bgTablet: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
+      resize(width: 800, height: 1100, quality: 50, cropFocus: ATTENTION) {
         src
       }
     }
     bgMobile: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
+      resize(width: 450, height: 850, quality: 50, cropFocus: ATTENTION) {
         src
       }
     }

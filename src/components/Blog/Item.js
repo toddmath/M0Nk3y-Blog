@@ -64,7 +64,7 @@ const Item = props => {
           margin: ${`calc(${theme.space.default} * 2) 0 calc(${theme.space.default} * 3)`};
           padding: ${theme.space.inset.s};
           position: relative;
-          transition: all ${theme.time.duration.default};
+          transition: all ${theme.time.duration.card};
           background: transparent;
 
           :global(.gatsby-image-outer-wrapper) {
@@ -84,7 +84,7 @@ const Item = props => {
             bottom: ${`calc(${theme.space.default} * -1.5)`};
             left: 50%;
             transform: translateX(-50%);
-            transition: all ${theme.time.duration.default};
+            transition: all ${theme.time.duration.card};
             width: 50%;
           }
 
@@ -97,7 +97,7 @@ const Item = props => {
               top: ${`calc(${theme.space.default} * -1.5)`};
               left: 50%;
               transform: translateX(-50%);
-              transition: all ${theme.time.duration.default};
+              transition: all ${theme.time.duration.card};
               width: 50%;
             }
           }
@@ -130,7 +130,7 @@ const Item = props => {
           span {
             align-items: center;
             display: flex;
-            text-transform: uppercase;
+            font-variant: small-caps;
             margin: ${theme.space.xs} ${theme.space.s} ${theme.space.xs} 0;
           }
         }
@@ -160,7 +160,7 @@ const Item = props => {
           h1 {
             font-size: ${`calc(${theme.blog.h1.size} * 1.2)`};
             padding: ${`calc(${theme.space.default} * 1.5) ${theme.space.default} 0`};
-            transition: all 0.5s;
+            transition: all ${theme.time.duration.card};
           }
           .meta {
             padding: ${`calc(${theme.space.m} * 1.5) ${theme.space.m}`};
@@ -220,7 +220,7 @@ const Item = props => {
               }
             }
             :global(.gatsby-image-wrapper) {
-              transition: all ${theme.time.duration.default};
+              transition: all ${theme.time.duration.card};
             }
             :global(.arrow) {
               display: inline-block;
@@ -229,7 +229,7 @@ const Item = props => {
               stroke-width: 40;
               stroke-linecap: round;
               opacity: 0;
-              transition: all 0.5s;
+              transition: all ${theme.time.duration.card};
               transform: translateX(-50%);
             }
           }
