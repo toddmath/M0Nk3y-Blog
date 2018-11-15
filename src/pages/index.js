@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import { ThemeContext } from "../layouts";
 import Blog from "../components/Blog";
 import Hero from "../components/Hero";
-import Seo from "../components/Seo";
+import SEO from "../components/SEO";
 
 class IndexPage extends React.Component {
   separator = React.createRef();
@@ -53,7 +53,7 @@ class IndexPage extends React.Component {
           {theme => <Blog posts={posts} theme={theme} />}
         </ThemeContext.Consumer>
 
-        <Seo facebook={facebook} />
+        <SEO facebook={facebook} />
 
         <style jsx>{`
           hr {

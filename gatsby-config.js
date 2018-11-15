@@ -36,6 +36,21 @@ module.exports = {
     title: config.siteTitle,
     description: config.siteDescription,
     siteUrl: config.siteUrl,
+    canonicalUrl: "https://toddmath.com",
+    image: 'https://toddmath.com/preview.jpg',
+    author: {
+      name: 'Todd Matheson'
+    },
+    organization: {
+      name: 'Todd Matheson',
+      url: 'https://toddmath.com',
+      logo: 'https://toddmath.com/icons/icon-512x512.png'
+    },
+    social: {
+      twitter: '@tM0Nk3y',
+      fbAppID: process.env.FB_APP_ID ? process.env.FB_APP_ID : ""
+    },
+    twitterUsername: config.authorTwitterAccount,
     algolia: {
       appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
       searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
@@ -150,8 +165,8 @@ module.exports = {
         start_url: config.manifestStartUrl,
         background_color: config.manifestBackgroundColor,
         theme_color: config.manifestThemeColor,
-        display: config.manifestDisplay
-        /** icons: [
+        display: config.manifestDisplay,
+        icons: [
           {
             src: "/icons/icon-48x48.png",
             sizes: "48x48",
@@ -187,7 +202,7 @@ module.exports = {
             sizes: "512x512",
             type: "image/png"
           }
-        ] */
+        ]
       }
     },
     {
@@ -227,7 +242,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Exo', 'Acme']
+          families: ["Exo", "Acme"]
         }
       }
     },

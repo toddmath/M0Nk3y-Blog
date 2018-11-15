@@ -9,7 +9,7 @@ module.exports = {
 
   /* author */
   authorName: "Todd Matheson",
-  authorTwitterAccount: "tM0Nk3y",
+  authorTwitterAccount: "@tM0Nk3y",
 
   /* info */
   headerTitle: "Todd Matheson",
@@ -18,8 +18,8 @@ module.exports = {
   /* manifest.json */
   manifestName: "M0Nk3y Webdev - a full stack blog",
   manifestShortName: "M0Nk3y Blog", // max 12 characters
-  manifestStartUrl: "/index.html",
-  manifestBackgroundColor: "white",
+  manifestStartUrl: "/",
+  manifestBackgroundColor: "#ecebea",
   manifestThemeColor: "#255DC6",
   manifestDisplay: "standalone",
 

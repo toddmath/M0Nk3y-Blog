@@ -1,7 +1,7 @@
 ---
 title: First post brought to you by Gatsby!
 category: "tutorials"
-cover: light-sky-recreation-japan-festival-fireworks-1016653-pxhere.com.jpg
+cover: firework.jpg
 author: Todd Matheson
 ---
 
