@@ -10,7 +10,7 @@ const SEO = ({ postData, postImage, isBlogPost, facebook }) => (
     query={graphql`
       {
         site {
-          siteMetaData {
+          siteMetadata {
             title
             description
             canonicalUrl
