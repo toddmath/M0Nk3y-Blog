@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import SchemaOrg from "./SchemaOrg";
 
-const SEO = ({ postData, postImage, isBlogPost, facebook }) => (
+const Seo = ({ postData, postImage, isBlogPost, facebook }) => (
   <StaticQuery
     query={graphql`
       {
@@ -83,7 +83,7 @@ const SEO = ({ postData, postImage, isBlogPost, facebook }) => (
   />
 );
 
-SEO.propTypes = {
+Seo.propTypes = {
   data: PropTypes.object,
   facebook: PropTypes.object.isRequired,
   isBlogPost: PropTypes.bool,
@@ -96,10 +96,10 @@ SEO.propTypes = {
   postImage: PropTypes.string
 };
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   isBlogPost: false,
   postData: { childMarkdownRemark: {} },
   postImage: null
 };
 
-export default SEO;
+export default Seo;
