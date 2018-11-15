@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 
 // @ts-ignore
-export default React.memo(
+export default React.PureComponent(
   ({
     author,
     canonicalUrl,
