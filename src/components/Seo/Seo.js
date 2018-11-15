@@ -23,7 +23,7 @@ const SEO = ({ postData, postImage, isBlogPost, facebook }) => (
               url
               logo
             }
-            socail {
+            social {
               twitter
               fbAppID
             }
