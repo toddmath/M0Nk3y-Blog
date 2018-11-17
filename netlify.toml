@@ -30,16 +30,26 @@
     Cache-Control = "public, max-age=31536000, stale-while-revalidate=2592000"
 [[redirects]]
   from = "https://toddmath.netlify.com/*"
-  to = "https://toddmath.com/:splat"
+  to = "https://www.toddmath.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "http://toddmath.netlify.com/*"
+  to    = "https://www.toddmath.com/:splat"
   status = 301
   force = true
 [[redirects]]
   from = "http://www.toddmath.netlify.com/*"
-  to = "https://www.toddmath.netlify.com/:splat"
+  to = "https://www.toddmath.com/:splat"
   status = 301
   force = true
 [[redirects]]
   from = "https://www.toddmath.netlify.com/*"
-  to = "https://toddmath.com/:splat"
+  to = "https://www.toddmath.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://toddmath.com/*"
+  to = "https://www.toddmath.com/:splat"
   status = 301
   force = true
