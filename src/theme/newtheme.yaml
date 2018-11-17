@@ -66,7 +66,8 @@ color:
 font:
   # font options
   family:
-    initial: "Arial, sans-serif"
+    # initial: "Arial, sans-serif"
+    initial: "Verdana, sans-serif"
     target: &font-family-target "Exo, sans-serif"
     targetHeading: &font-family-target-heading "Acme, sans-serif"
     # Trebuchet-based sans serif stack

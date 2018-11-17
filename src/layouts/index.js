@@ -144,14 +144,14 @@ class Layout extends React.Component {
                       body {
                         font-family: ${this.state.font400loaded
                           ? "Exo, serif;"
-                          : "Arial, sans-serif;"};
+                          : "Verdana, sans-serif;"};
                       }
                       h1,
                       h2,
                       h3 {
                         font-family: ${this.state.font600loaded
                           ? "Acme, sans-serif;"
-                          : "Arial, sans-serif;"};
+                          : "Verdana, sans-serif;"};
                         font-weight: ${this.state.font600loaded ? 600 : 600};
                         line-height: 1.1;
                         letter-spacing: -0.03em;
