@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { FaArrowDown } from "react-icons/fa/";
+import { FaAngleDown } from "react-icons/fa/";
 
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
@@ -13,7 +13,7 @@ const Hero = props => {
           Todd Matheson's blog&nbsp; <strong>M0Nk3y WebDev</strong>
         </h1>
         <button onClick={scrollToContent} aria-label="scroll">
-          <FaArrowDown />
+          <FaAngleDown />
         </button>
       </section>
 
@@ -40,7 +40,7 @@ const Hero = props => {
           margin: ${theme.space.stack.l};
           color: ${theme.hero.h1.color};
           line-height: ${theme.hero.h1.lineHeight};
-          text-remove-gap: both 0 "Open Sans";
+          text-remove-gap: both 0 "Verdana";
 
           :global(strong) {
             position: relative;

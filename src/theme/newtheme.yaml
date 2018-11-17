@@ -134,6 +134,7 @@ line:
   color: *color-gray-3
 icon:
   color: *color-brand-primary
+  altcolor: *color-special-attention
 
 # COMPONENT TOKENS
 hero:

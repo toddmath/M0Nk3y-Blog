@@ -29,18 +29,20 @@ const Meta = props => {
         .meta {
           display: flex;
           flex-flow: row wrap;
-          font-size: 0.8em;
+          justify-content: space-around;
+          font-size: 0.9em;
           margin: ${theme.space.m} 0;
           background: transparent;
 
           :global(svg) {
-            fill: ${theme.icon.color};
+            fill: ${theme.icon.altcolor};
             margin: ${theme.space.inline.xs};
           }
           span {
             align-items: center;
             display: flex;
-            text-transform: uppercase;
+            font-variant: small-caps;
+            font-weight: bold;
             margin: ${theme.space.xs} ${theme.space.s} ${theme.space.xs} 0;
           }
         }
