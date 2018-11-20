@@ -177,6 +177,23 @@ class Layout extends React.Component {
                       progress {
                         vertical-align: baseline;
                       }
+                      .scrollbar {
+                        overflow-y: scroll;
+                      }
+                      .force-overflow {
+                        min-height: 100%;
+                      }
+                      ::webkit-scrollbar {
+                        width: 6px;
+                        background-color: #f5f5f5;
+                      }
+                      ::webkit-scrollbar-track {
+                        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                        background-color: #f5f5f5;
+                      }
+                      ::webkit-scrollbar-thumb {
+                        background-color: #000000;
+                      }
                     `}</style>
                   </React.Fragment>
                 </ScreenWidthContext.Provider>

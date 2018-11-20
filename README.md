@@ -1,136 +1,99 @@
-# HeroBlog
+<h1 align="center"> Todd Matheson's Blog 🐒M0Nk3y WebDev</h1>
+<h3 align="center">🚀 https://www.toddmath.com </h3> 
+<hr>
 
-A [GatsbyJS](https://www.gatsbyjs.org/) blog starter. <br /><br />
+<img alt="demo" src="https://www.toddmath.com/screens/M0Nk3y_WebDev2.gif" align="center"/>
 
-[![GitHub tag](https://img.shields.io/github/tag/greglobinski/gatsby-starter-hero-blog.svg)](https://github.com/greglobinski/gatsby-starter-personal-blog)
-[![GitHub stars](https://img.shields.io/github/stars/greglobinski/gatsby-starter-hero-blog.svg)](https://github.com/greglobinski/gatsby-starter-personal-blog/stargazers)
-[![GitHub license](https://img.shields.io/github/license/greglobinski/gatsby-starter-hero-blog.svg)](https://github.com/greglobinski/gatsby-starter-personal-blog/blob/master/LICENSE)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-![GitHub contributors](https://img.shields.io/github/contributors/greglobinski/gatsby-starter-hero-blog.svg)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/greglobinski/gatsby-starter-hero-blog.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fgreglobinski%2Fgatsby-starter-hero-blog)
+## Table Of Contents
 
-  <br />
+<!--- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<details>
+<summary>Click to expand</summary>
 
-![](static/screens/gatsby-starter-hero-blog.gif) <br />
+- [Author](#author)
 
-  <br />
+- [Features](#features)
 
-See the starter in action » [demo website](https://gatsby-starter-hero-blog.greglobinski.com/) <br />For more information visit » [dev.greglobinski.com/gatsby-starter-hero-blog](https://dev.greglobinski.com/gatsby-starter-hero-blog/)
+- [Gatsby Plugins](#plugins)
 
-## Description
+</details>
+<!-- AUTO-GENERATED-CONTENT:END -->
 
-A ready to use, easy to customize 'like theme' starter with a 'Hero' section on the home page.
+## <a name="author"></a>Author
+<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<details>
+<summary>Todd Matheson</summary>
+<p> 32 year old aspiring web developer who created this blog for hands on experiance and as a platform to share some usefull knowledge he gains on his journey towards full stack development. 
+</p>
+</details>
+<!-- AUTO-GENERATED-CONTENT:END -->
 
-The starter was initially built for Gatsby v1. Now, thanks to [@mohsenkhanpour](https://github.com/mohsenkhanpour) it's [upgraded](https://github.com/greglobinski/gatsby-starter-hero-blog/issues/32) to Gatsby v2. Thank you Mohsen :)
+## <a name="features"></a>Features
+<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) --> 
+<details>
+<summary><img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" align="center" width="60" /><span><strong> Gatsby.js </strong></span></summary>
+<p align="center">
+  <a href="https://gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby v2
+</h1>
+<h3 align="center">
+  ⚛️ 📄 🚀
+</h3>
+<p align="center">
+  <strong>Blazing fast modern site generator for React</strong><br>
+  Go beyond static sites: build blogs, e-commerce sites, full-blown apps, and more with Gatsby.
+ </p>
+ <p align="center">
+<a href="https://www.npmjs.org/package/gatsby">
+    <img src="https://img.shields.io/npm/v/gatsby.svg" alt="Current npm package version." />
+  </a>
+<a href="https://npmcharts.com/compare/gatsby?minimal=true">
+    <img src="https://img.shields.io/npm/dm/gatsby.svg" alt="Downloads per month on npm." />
+  </a>
+  <a href="https://npmcharts.com/compare/gatsby?minimal=true">
+    <img src="https://img.shields.io/npm/dt/gatsby.svg" alt="Total downloads on npm." />
+  </a>
+  <a href="https://gatsbyjs.org/docs/how-to-contribute">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  </a>  
+</p>
+</details>
+<!-- AUTO-GENERATED-CONTENT:END -->
 
-The original version of the starter is preserved as the branch `gatsby-v1`.
+## <a name="plugins"></a>Gatsby Plugins
+<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<details>
+<summary>List of Gatsby plugins used</summary>
 
-## Features:
-
-- Easy editable content in **Markdown** files (posts, pages and parts)
-- **CSS** with `styled-jsx` and `PostCSS`
-- **SEO** (sitemap generation, robot.txt, meta and OpenGraph Tags)
-- **Social** sharing (Twitter, Facebook, Google, LinkedIn)
-- **Comments** (Facebook)
-- **Images** lazy loading and `webp` support (gatsby-image)
-- Post **categories** (category based post list)
-- Full text **searching** (Algolia)
-- **Contact** form (Netlify form handling)
-- Form elements and validation with `ant-design`
-- **RSS** feed
-- 100% **PWA** (manifest.webmanifest, offline support, favicons)
-- Google **Analytics**
-- App **favicons** generator (node script)
-- Easy customizable base **styles** via `theme` object generated from `yaml` file (fonts, colors, sizes)
-- React **v.16.3** (gatsby-plugin-react-next)
-- **Components** lazy loading (social sharing)
-- **ESLint** (google config)
-- **Prettier** code styling
-- Webpack `BundleAnalyzerPlugin`
-- **Gravatar** image (optional) instead local Avatar/Logo image
-
-## Prerequisites
-
-If you do not have Gatsby Cli installed yet, do it first.
-
-```text
-npm install --global gatsby-cli
-```
-
-More information on [GatsbyJS.org](https://www.gatsbyjs.org/tutorial/part-one)
-
-## Getting started
-
-Install the starter using Gatsby Cli `gatsby new` command.
-
-```text
-gatsby new [NEW_SITE_DIRECTORY_FOR_YOUR_BLOG] https://github.com/greglobinski/gatsby-starter-hero-blog.git
-```
-
-Go into the newly created directory and run
-
-```text
-gatsby develop
-```
-
-to hot-serve your website on http://localhost:8000 or
-
-```text
-gatsby build
-```
-
-to create static site ready to host (/public).
-
-##### External services
-
-The starter uses external services for some functions: comments, searching, analytics. To use them you have to secure some access data. All services are free to use or have generous free tiers big enough for a personal blog.
-
-Create an `.env` file like below in the root folder. Change `...` placeholders with real data.
-<br />By default, your `.env` file will be ignored by git. Remove `.env` from `.gitignore` in order to be able to push the file to your repository.
-
-```text
-GOOGLE_ANALYTICS_ID=...
-ALGOLIA_APP_ID=...
-ALGOLIA_SEARCH_ONLY_API_KEY=...
-ALGOLIA_ADMIN_API_KEY=...
-ALGOLIA_INDEX_NAME=...
-FB_APP_ID=...
-```
-
-### Instructions & tutorials
-
-- [How to install, setup and add new content to a Blog starter](https://dev.greglobinski.com/install-blog-starter/)
-- [Setup Algolia account for your GatsbyJS blog](https://dev.greglobinski.com/setup-algolia-account/)
-- More articles at [Front-end web development with Greg](https://dev.greglobinski.com/)
-
-## Windows users
-
-You should take a look at this: [Gatsby on Windows](https://www.gatsbyjs.org/docs/gatsby-on-windows/)
-
-## Authors
-
-- Greg Lobinski [@greglobinski](https://github.com/greglobinski)
-
-See also the list of [contributors](https://github.com/greglobinski/gatsby-starter-personal-blog/graphs/contributors) who participated in this project.
-
-## Contributing
-
-- Fork the repo
-- Create your feature branch (git checkout -b feature/fooBar)
-- Commit your changes (git commit -am 'Add some fooBar')
-- Push to the branch (git push origin feature/fooBar)
-- Create a new Pull Request
-
-## Licence
-
-MIT License
-
-Copyright (c) 2017 gatsbyjs <br />Copyright (c) 2018 greg lobinski
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+* gatsby-plugin-styled-jsx
+* gatsby-plugin-styled-jsx-postcss
+* gatsby-plugin-layout
+* gatsby-plugin-algolia
+* gatsby-source-filesystem
+* gatsby-transformer-remark
+* gatsby-plugin-sharp
+* gatsby-remark-images
+* gatsby-remark-responsive-iframe
+* gatsby-remark-prismjs
+* gatsby-remark-copy-linked-files
+* gatsby-remark-smartypants
+* gatsby-remark-emojis
+* gatsby-plugin-sharp
+* gatsby-transformer-sharp
+* gatsby-plugin-react-helmet
+* gatsby-plugin-catch-links
+* gatsby-plugin-manifest
+* gatsby-plugin-favicon
+* gatsby-plugin-web-font-loader
+* gatsby-plugin-offline
+* gatsby-plugin-google-analytics
+* gatsby-plugin-feed
+* gatsby-plugin-sitemap
+* gatsby-plugin-react-svg
+* gatsby-plugin-netlify
+</details>
+<!-- AUTO-GENERATED-CONTENT:END -->

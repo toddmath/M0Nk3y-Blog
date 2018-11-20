@@ -64,7 +64,7 @@ const CategoryPage = props => {
               }
               h2 :global(svg) {
                 height: 0.8em;
-                fill: ${theme.color.brand.primary};
+                fill: ${theme.color.special.attention};
               }
             `}</style>
           </Article>
@@ -103,8 +103,8 @@ export const query = graphql`
             cover {
               children {
                 ... on ImageSharp {
-                  fluid(maxWidth: 800, maxHeight: 360) {
-                    ...GatsbyImageSharpFluid_withWebp
+                  fluid(maxWidth: 800, maxHeight: 360, quality: 60) {
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import PropTypes from "prop-types";
 import React from "react";
 import { graphql } from "gatsby";
@@ -32,7 +33,6 @@ const SearchPage = props => {
           </Article>
         )}
       </ThemeContext.Consumer>
-
       <Seo facebook={facebook} />
 
       {/* --- STYLES --- */}
