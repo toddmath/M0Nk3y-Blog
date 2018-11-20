@@ -1,9 +1,11 @@
 <h1 align="center"> Todd Matheson's Blog 🐒M0Nk3y WebDev</h1>
-<h3 align="center">🚀 https://www.toddmath.com </h3> 
+<h2 align="center">🚀 https://www.toddmath.com ⚛️</h2> 
 <hr>
-
-<img alt="demo" src="https://www.toddmath.com/screens/M0Nk3y_WebDev2.gif" align="center"/>
-
+<br />
+<p align="center">
+ <img src="htts://www.toddmath.com/screens/M0Nk3y_WebDev2.gif" width="1220" height="620" title="Demo">
+</p>
+<br />
 ## Table Of Contents
 
 <!--- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
