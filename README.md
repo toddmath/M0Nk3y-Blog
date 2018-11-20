@@ -1,11 +1,14 @@
 <h1 align="center"> Todd Matheson's Blog 🐒M0Nk3y WebDev</h1>
 <h2 align="center">🚀 https://www.toddmath.com ⚛️</h2> 
+
 <hr>
-<br />
+
+<br/>
+
 <p align="center">
- <img src="htts://www.toddmath.com/screens/M0Nk3y_WebDev2.gif" width="1220" height="620" title="Demo">
+ <img src="htts://www.toddmath.com/screens/M0Nk3y_WebDev2.gif" width="625" height="300" title="Demo">
 </p>
-<br />
+
 ## Table Of Contents
 
 <!--- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
@@ -25,8 +28,9 @@
 <!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
 <details>
 <summary>Todd Matheson</summary>
-<p> 32 year old aspiring web developer who created this blog for hands on experiance and as a platform to share some usefull knowledge he gains on his journey towards full stack development. 
-</p>
+
+I'm a 32 year old aspiring web developer and created this blog for the hands on experiance and as a platform to share some usefull knowledge I gain on my journey towards full stack development. The site is very new, and extremely bare bones at the moment, but I'll be adding more content very soon, so be sure to check back in the near future. I hope you learn something usefull and enjoy my site!!
+
 </details>
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -71,31 +75,32 @@
 <details>
 <summary>List of Gatsby plugins used</summary>
 
-* gatsby-plugin-styled-jsx
-* gatsby-plugin-styled-jsx-postcss
-* gatsby-plugin-layout
-* gatsby-plugin-algolia
-* gatsby-source-filesystem
-* gatsby-transformer-remark
-* gatsby-plugin-sharp
-* gatsby-remark-images
-* gatsby-remark-responsive-iframe
-* gatsby-remark-prismjs
-* gatsby-remark-copy-linked-files
-* gatsby-remark-smartypants
-* gatsby-remark-emojis
-* gatsby-plugin-sharp
-* gatsby-transformer-sharp
-* gatsby-plugin-react-helmet
-* gatsby-plugin-catch-links
-* gatsby-plugin-manifest
-* gatsby-plugin-favicon
-* gatsby-plugin-web-font-loader
-* gatsby-plugin-offline
-* gatsby-plugin-google-analytics
-* gatsby-plugin-feed
-* gatsby-plugin-sitemap
-* gatsby-plugin-react-svg
-* gatsby-plugin-netlify
+> 
+* **gatsby-plugin-styled-jsx**
+* **gatsby-plugin-styled-jsx-postcss**
+* **gatsby-plugin-layout**
+* **gatsby-plugin-algolia**
+* **gatsby-source-filesystem**
+* **gatsby-transformer-remark**
+* **gatsby-plugin-sharp**
+* **gatsby-remark-images**
+* **gatsby-remark-responsive-iframe**
+* **gatsby-remark-prismjs**
+* **gatsby-remark-copy-linked-files**
+* **gatsby-remark-smartypants**
+* **gatsby-remark-emojis**
+* **gatsby-plugin-sharp**
+* **gatsby-transformer-sharp**
+* **gatsby-plugin-react-helmet**
+* **gatsby-plugin-catch-links**
+* **gatsby-plugin-manifest**
+* **gatsby-plugin-favicon**
+* **gatsby-plugin-web-font-loader**
+* **gatsby-plugin-offline**
+* **gatsby-plugin-google-analytics**
+* **gatsby-plugin-feed**
+* **gatsby-plugin-sitemap**
+* **gatsby-plugin-react-svg**
+* **gatsby-plugin-netlify**
 </details>
 <!-- AUTO-GENERATED-CONTENT:END -->
