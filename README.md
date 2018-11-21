@@ -3,11 +3,14 @@
 
 <hr>
 
-<br/>
-
 <p align="center">
- <img src="htts://www.toddmath.com/screens/M0Nk3y_WebDev2.gif" width="625" height="300" title="Demo">
+
+<img src="https://media.githubusercontent.com/media/toddmath/M0Nk3y-Blog/master/static/screens/demo.gif" width="90%">
+
+</img>
+
 </p>
+
 
 ## Table Of Contents
 
