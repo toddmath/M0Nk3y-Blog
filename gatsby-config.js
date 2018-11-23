@@ -136,7 +136,8 @@ module.exports = {
               inlineCodeMarker: ">",
               aliases: { sh: "bash" }
             }
-          }`gatsby-remark-copy-linked-files`,
+          },
+          `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-smartypants`,
             options: {
