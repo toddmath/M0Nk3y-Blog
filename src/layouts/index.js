@@ -6,7 +6,6 @@ import { graphql, StaticQuery } from "gatsby";
 import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
 import Footer from "../components/Footer/";
 import Header from "../components/Header";
-require("/prismjs/themes/prism-okaidia.css");
 
 export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
