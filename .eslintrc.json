@@ -14,13 +14,14 @@
       "jsx": true
     }
   },
-  "plugins": ["prettier", "react", "jsx-a11y", "import", "graphql"],
+  "plugins": ["compat", "prettier", "react", "jsx-a11y", "import", "graphql"],
   "env": {
     "browser": true,
     "es6": true,
     "node": true
   },
   "rules": {
+    "compat/compat": "error",
     "arrow-body-style": "off",
     "camelcase": "warn",
     "func-names": "off",

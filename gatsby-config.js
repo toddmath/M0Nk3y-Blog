@@ -37,17 +37,17 @@ module.exports = {
     description: config.siteDescription,
     siteUrl: config.siteUrl,
     canonicalUrl: "https://toddmath.com",
-    image: 'https://toddmath.com/preview.jpg',
+    image: "https://toddmath.com/preview.jpg",
     author: {
-      name: 'Todd Matheson'
+      name: "Todd Matheson"
     },
     organization: {
-      name: 'Todd Matheson',
-      url: 'https://toddmath.com',
-      logo: 'https://toddmath.com/icons/icon-512x512.png'
+      name: "Todd Matheson",
+      url: "https://toddmath.com",
+      logo: "https://toddmath.com/icons/icon-512x512.png"
     },
     social: {
-      twitter: '@tM0Nk3y',
+      twitter: "@tM0Nk3y",
       fbAppID: process.env.FB_APP_ID ? process.env.FB_APP_ID : ""
     },
     twitterUsername: config.authorTwitterAccount,
@@ -109,16 +109,19 @@ module.exports = {
         path: `${__dirname}/content/parts/`
       }
     },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-plugin-sharp`,
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
-              backgroundColor: "transparent"
+              backgroundColor: "transparent",
+              wrapperStyle: "margin-bottom:10px; margin-color:#255DC6;",
+              quality: "50",
+              withWebp: "true"
             }
           },
           {
@@ -127,9 +130,22 @@ module.exports = {
               wrapperStyle: `margin-bottom: 2em`
             }
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: ">",
+              aliases: { sh: "bash" }
+            }
+          }`gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-smartypants`,
+            options: {
+              quotes: true,
+              ellipses: true,
+              backticks: true,
+              dashes: "oldschool"
+            }
+          },
           {
             resolve: "gatsby-remark-emojis",
             options: {
@@ -151,6 +167,15 @@ module.exports = {
             }
           }
         ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: "#255DC6",
+        // Disable the loading spinner.
+        showSpinner: true
       }
     },
     `gatsby-plugin-sharp`,
@@ -318,7 +343,14 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-netlify"
+      resolve: "gatsby-plugin-netlify",
+      options: {
+        allPageHeaders: [
+          "Link: </static/icons/icon-48x48.png; rel=preload; as=image",
+          "Link: </images/app-icons/icon.png; rel=preload; as=image",
+          "Link: </images/jpg/avatar.jpg; rel=preload; as=image"
+        ]
+      }
     }
   ]
 };

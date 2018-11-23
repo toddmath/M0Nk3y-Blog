@@ -67,9 +67,9 @@ font:
   # font options
   family:
     # initial: "Arial, sans-serif"
-    initial: "Verdana, sans-serif"
-    target: &font-family-target "Exo, sans-serif"
-    targetHeading: &font-family-target-heading "Acme, sans-serif"
+    initial: "Verdana"
+    target: &font-family-target "Exo"
+    targetHeading: &font-family-target-heading "Acme"
     # Trebuchet-based sans serif stack
     # target: &font-family-target "Segoe UI, Candara, Bitstream Vera Sans, #DejaVu Sans, Bitstream Vera Sans, Trebuchet MS, Verdana, Verdana Ref, #sans-serif"
     # target: &font-family-target "Open Sans, Avenir Next, Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif"
@@ -140,10 +140,22 @@ icon:
 hero:
   h1:
     family: *font-family-target-heading
+    font-variant: small-caps
     size: *font-size-xxxl
-    color: *color-gray-1
+    color: black
+    font-weight: bold
+    margin: 0 auto
+    padding: 10px
+    width: 50%
+    text-align: center
+    position: absolute
+    top: 50%
+    bottom: 50%
+    transform: translate(-50%, -50%)
+    mix-blend-mode: screen
+    # color: *color-gray-1
     lineHeight: *font-line-height-xs
-  background: "linear-gradient(0deg, #2D609B, #233FCF)"
+    #background: "linear-gradient(0deg, #2D609B, #233FCF)"
 blog:
   h1:
     family: *font-family-target-heading

@@ -5,8 +5,7 @@
 
 <p align="center">
 
-<img src="https://media.githubusercontent.com/media/toddmath/M0Nk3y-Blog/master/static/screens/demo.gif" width="90%">
-
+<img src="https://media.githubusercontent.com/media/toddmath/M0Nk3y-Blog/master/static/screens/demo.gif" width="90%" alt="Demo Gif of homepage" title="Demo">
 </img>
 
 </p>
@@ -17,6 +16,7 @@
 <!--- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
 <details>
 <summary>Click to expand</summary>
+<hr>
 
 - [Author](#author)
 
@@ -25,30 +25,45 @@
 - [Gatsby Plugins](#plugins)
 
 </details>
+
 <!-- AUTO-GENERATED-CONTENT:END -->
+
 
 ## <a name="author"></a>Author
+
 <!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+
 <details>
 <summary>Todd Matheson</summary>
+<hr>
 
-I'm a 32 year old aspiring web developer and created this blog for the hands on experiance and as a platform to share some usefull knowledge I gain on my journey towards full stack development. The site is very new, and extremely bare bones at the moment, but I'll be adding more content very soon, so be sure to check back in the near future. I hope you learn something usefull and enjoy my site!!
+<p>I'm a 32 year old aspiring web developer and created this blog for the hands on experiance and as a platform to share some usefull knowledge I gain on my journey towards full stack development. The site is very new, and extremely bare bones at the moment, but I'll be adding more content very soon, so be sure to check back in the near future. I hope you learn something usefull and enjoy my site!!
+</p>
 
 </details>
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+
 ## <a name="features"></a>Features
+
 <!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) --> 
+
 <details>
-<summary><img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" align="center" width="60" /><span><strong> Gatsby.js </strong></span></summary>
+<summary><img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" verticak-align="sub" width="60"/>
+</summary>
+
 <p align="center">
   <a href="https://gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
+    
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60"/></img>  
+  
+ </a>
 </p>
+
 <h1 align="center">
   Gatsby v2
-</h1>
+  </h1>
 <h3 align="center">
   ⚛️ 📄 🚀
 </h3>
@@ -63,18 +78,21 @@ I'm a 32 year old aspiring web developer and created this blog for the hands on 
 <a href="https://npmcharts.com/compare/gatsby?minimal=true">
     <img src="https://img.shields.io/npm/dm/gatsby.svg" alt="Downloads per month on npm." />
   </a>
-  <a href="https://npmcharts.com/compare/gatsby?minimal=true">
+<a href="https://npmcharts.com/compare/gatsby?minimal=true">
     <img src="https://img.shields.io/npm/dt/gatsby.svg" alt="Total downloads on npm." />
   </a>
-  <a href="https://gatsbyjs.org/docs/how-to-contribute">
+<a href="https://gatsbyjs.org/docs/how-to-contribute">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
   </a>  
 </p>
 </details>
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## <a name="plugins"></a>Gatsby Plugins
+
 <!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+
 <details>
 <summary>List of Gatsby plugins used</summary>
 
@@ -106,4 +124,5 @@ I'm a 32 year old aspiring web developer and created this blog for the hands on 
 * **gatsby-plugin-react-svg**
 * **gatsby-plugin-netlify**
 </details>
+
 <!-- AUTO-GENERATED-CONTENT:END -->

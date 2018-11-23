@@ -37,8 +37,16 @@ const Hero = props => {
         h1 {
           text-align: center;
           font-size: ${theme.hero.h1.size};
-          margin: ${theme.space.stack.l};
+          margin: ${theme.hero.h1.margin};
+          padding: ${theme.hero.h1.padding};
           color: ${theme.hero.h1.color};
+          width: ${theme.hero.h1.width};
+          text-align: center;
+          position: ${theme.hero.h1.postion};
+          top: ${theme.hero.h1.top};
+          bottom: ${theme.hero.h1.bottom};
+          transform: ${theme.hero.h1.transform};
+          mix-blend-mode: screen;
           line-height: ${theme.hero.h1.lineHeight};
           text-remove-gap: both 0 "Verdana";
 
@@ -60,12 +68,12 @@ const Hero = props => {
         }
 
         button {
-          background: ${theme.background.color.brand};
+          background: ${theme.color.brand.light};
           border: 0;
-          border-radius: 50%;
+          border-radius: 25px 25px 55px 55px;
           font-size: ${theme.font.size.m};
           padding: ${theme.space.s} ${theme.space.m};
-          cursor: pointer;
+          cursor: s-resize;
           width: ${theme.space.xl};
           height: ${theme.space.xl};
 
@@ -90,7 +98,13 @@ const Hero = props => {
           0% {
             transform: translateY(0);
           }
+          25% {
+            transform: translateY(-10px);
+          }
           50% {
+            transform: translateY(-6);
+          }
+          75% {
             transform: translateY(-10px);
           }
           100% {
@@ -119,7 +133,7 @@ const Hero = props => {
           }
 
           h1 {
-            max-width: 80%;
+            max-width: 75%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.5)`};
           }
 

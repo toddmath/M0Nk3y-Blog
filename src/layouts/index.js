@@ -1,5 +1,3 @@
-// @ts-nocheck
-// import "typeface-open-sans";
 import FontFaceObserver from "fontfaceobserver";
 import PropTypes from "prop-types";
 import React from "react";
@@ -8,6 +6,7 @@ import { graphql, StaticQuery } from "gatsby";
 import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
 import Footer from "../components/Footer/";
 import Header from "../components/Header";
+require("/prismjs/themes/prism-okaidia.css");
 
 export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
@@ -142,17 +141,15 @@ class Layout extends React.Component {
                         padding: 0;
                       }
                       body {
-                        font-family: ${this.state.font400loaded
-                          ? "Exo, serif;"
-                          : "Verdana, sans-serif;"};
+                        font-family: ${this.state.font400loaded ? "Exo;" : "Verdana, sans-serif;"};
+                        font-size-adjust: 0.58;
                       }
                       h1,
                       h2,
                       h3 {
-                        font-family: ${this.state.font600loaded
-                          ? "Acme, sans-serif;"
-                          : "Verdana, sans-serif;"};
+                        font-family: ${this.state.font600loaded ? "Acme;" : "Verdana, sans-serif;"};
                         font-weight: ${this.state.font600loaded ? 600 : 600};
+                        font-size-adjust: 0.58;
                         line-height: 1.1;
                         letter-spacing: -0.03em;
                         margin: 0;
@@ -181,7 +178,7 @@ class Layout extends React.Component {
                         overflow-y: scroll;
                       }
                       .force-overflow {
-                        min-height: 100%;
+                        min-height: 480px;
                       }
                       ::webkit-scrollbar {
                         width: 6px;
