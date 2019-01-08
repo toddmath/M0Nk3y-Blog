@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: "M0Nk3y Webdev", // <title>
-  shortSiteTitle: "M0Nk3y WebDev - FullStack BaddAssary!", // <title> ending for posts and pages
-  siteDescription: "M0Nk3y WebDev is a blog on full stack development.",
+  shortSiteTitle: "M0Nk3y WebDev - Frontend Web Development", // <title> ending for posts and pages
+  siteDescription: "M0Nk3y WebDev is a blog on front-end web development.",
   siteUrl: "https://toddmath.com",
   // pathPrefix: "",
   siteImage: "preview.jpg",
@@ -16,8 +16,8 @@ module.exports = {
   headerSubTitle: "M0Nk3y WebDev",
 
   /* manifest.json */
-  manifestName: "M0Nk3y Webdev - a full stack blog",
-  manifestShortName: "M0Nk3y Blog", // max 12 characters
+  manifestName: "M0Nk3y Webdev - a frontend blog",
+  manifestShortName: "M0Nk3y WebDev", // max 12 characters
   manifestStartUrl: "/",
   manifestBackgroundColor: "#ecebea",
   manifestThemeColor: "#255DC6",
