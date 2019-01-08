@@ -5,7 +5,7 @@ cover: firework.jpg
 author: Todd Matheson
 ---
 
-Welcome to my first blog post, ✨M0Nk3y WebDev:sparkles:!! After reading tons of cool blogs by other developers, and gaining all sorts of practical knowledge, it was a no-brainer for me to create one, aswell. I hope you learn something that'll help you create your own web app, and enjoy reading my posts as I did writing them!
+Welcome to my first blog post ✨!! After reading tons of cool blogs by other developers, and gaining all sorts of practical knowledge, it was a no-brainer for me to create one, aswell. I hope you learn something that'll help you create your own web app, and enjoy reading my posts as I did writing them!
 
 Today, I'm gonna show you the steps I took to create this very site. After trying multiple different frameworks such as, [Jekyll](https://jekyllrb.com) 😉, [WordPress](https://wordpress.org/) 😉, and a few others, I finally landed on [Gatsby.js](https://www.gatsbyjs.org/). Although those former frameworks worked well and provided the necessary tools to create a nice blog, I felt they weren't flexible enough for what I was after, especially after starting to use [React.js](https://reactjs.org/), [Redux.js](https://redux.js.org/), and [Vue.js](https://vuejs.org/). [Gatsby's](https://www.gatsbyjs.org/) true strength lies in it's component based architect, while mainting static site builds, hence compatability with [Github Pages](https://pages.github.com/ "Github Pages Homepage")😼 , and other free repo web hosts. Another awesome benefit with [Gastsby](https://www.gatsbyjs.org/) is the ability to use [GarphQL](https://graphql.org), making it extremely flexible and capable.
 
