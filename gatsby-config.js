@@ -21,14 +21,14 @@ const query = `{
   }
 }`;
 
-const queries = [
-  {
-    query,
-    transformer: ({ data }) => {
-      return data.allMarkdownRemark.edges.reduce(transformer, []);
-    }
+const queries = [{
+  query,
+  transformer: ({
+    data
+  }) => {
+    return data.allMarkdownRemark.edges.reduce(transformer, []);
   }
-];
+}];
 
 module.exports = {
   // pathPrefix: config.pathPrefix,
@@ -53,9 +53,8 @@ module.exports = {
     twitterUsername: config.authorTwitterAccount,
     algolia: {
       appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
-      searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
-        ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
-        : "",
+      searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY ?
+        process.env.ALGOLIA_SEARCH_ONLY_API_KEY : "",
       indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
     },
     facebook: {
@@ -113,8 +112,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          {
+        plugins: [{
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
@@ -134,7 +132,10 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
               inlineCodeMarker: ">",
-              aliases: { sh: "bash" }
+              aliases: {
+                sh: "bash",
+                js: "javascript"
+              }
             }
           },
           `gatsby-remark-copy-linked-files`,
@@ -192,8 +193,7 @@ module.exports = {
         background_color: config.manifestBackgroundColor,
         theme_color: config.manifestThemeColor,
         display: config.manifestDisplay,
-        icons: [
-          {
+        icons: [{
             src: "/icons/icon-48x48.png",
             sizes: "48x48",
             type: "image/png"
@@ -235,7 +235,6 @@ module.exports = {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/favicon.png",
-
         // WebApp Manifest Configuration
         appName: config.manifestName, // Inferred with your package.json
         appDescription: config.siteDescription,
@@ -249,7 +248,6 @@ module.exports = {
         orientation: "any",
         start_url: config.manifestStartUrl,
         version: "1.0",
-
         icons: {
           android: true,
           appleIcon: true,
@@ -257,7 +255,7 @@ module.exports = {
           coast: false,
           favicons: true,
           firefox: true,
-          opengraph: false,
+          opengraph: true,
           twitter: true,
           yandex: false,
           windows: true
@@ -280,6 +278,17 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-guess-js`,
+      options: {
+        GAViewID: config.viewID,
+        minimumThreshold: 0.03,
+        period: {
+          startDate: new Date("2018-1-1"),
+          endDate: new Date(),
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
@@ -294,19 +303,25 @@ module.exports = {
             }
           }
         `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }]
-                });
+        feeds: [{
+          serialize: ({
+            query: {
+              site,
+              allMarkdownRemark
+            }
+          }) => {
+            return allMarkdownRemark.edges.map(edge => {
+              return Object.assign({}, edge.node.frontmatter, {
+                description: edge.node.excerpt,
+                url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                custom_elements: [{
+                  "content:encoded": edge.node.html
+                }]
               });
-            },
-            query: `
+            });
+          },
+          query: `
               {
                 allMarkdownRemark(
                   limit: 1000,
@@ -329,9 +344,8 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml"
-          }
-        ]
+          output: "/rss.xml"
+        }]
       }
     },
     {

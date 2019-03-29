@@ -1,5 +1,6 @@
 <h1 align="center"> Todd Matheson's Blog 🐒M0Nk3y WebDev</h1>
-<h2 align="center">🚀 https://www.toddmath.com ⚛️</h2> 
+<h2 align="center">🚀 https://www.toddmath.com ⚛️</h2>
+
 
 <hr>
 
@@ -9,6 +10,9 @@
 </img>
 
 </p>
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ef905ea7-921c-4183-87e1-9525ec7b5d2a/deploy-status)](https://app.netlify.com/sites/toddmath/deploys)
 
 
 ## Table Of Contents
@@ -47,7 +51,7 @@
 
 ## <a name="features"></a>Features
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) --> 
+<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
 
 <details>
 <summary><img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" verticak-align="sub" width="60"/>
@@ -55,9 +59,9 @@
 
 <p align="center">
   <a href="https://gatsbyjs.org">
-    
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60"/></img>  
-  
+
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60"/></img>
+
  </a>
 </p>
 
@@ -83,7 +87,7 @@
   </a>
 <a href="https://gatsbyjs.org/docs/how-to-contribute">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
-  </a>  
+  </a>
 </p>
 </details>
 
@@ -96,7 +100,7 @@
 <details>
 <summary>List of Gatsby plugins used</summary>
 
-> 
+>
 * **gatsby-plugin-styled-jsx**
 * **gatsby-plugin-styled-jsx-postcss**
 * **gatsby-plugin-layout**

@@ -1,9 +1,15 @@
 import FontFaceObserver from "fontfaceobserver";
 import PropTypes from "prop-types";
 import React from "react";
-import { graphql, StaticQuery } from "gatsby";
+import {
+  graphql,
+  StaticQuery
+} from "gatsby";
 
-import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
+import {
+  getScreenWidth,
+  timeoutThrottlerHandler
+} from "../utils/helpers";
 import Footer from "../components/Footer/";
 import Header from "../components/Header";
 
@@ -47,7 +53,9 @@ class Layout extends React.Component {
   };
 
   resizeHandler = () => {
-    this.setState({ screenWidth: getScreenWidth() });
+    this.setState({
+      screenWidth: getScreenWidth()
+    });
   };
 
   isHomePage = () => {
@@ -66,7 +74,9 @@ class Layout extends React.Component {
     font.load(null, 10000).then(
       () => {
         console.log(`${name} is available`);
-        this.setState({ [`${name}loaded`]: true });
+        this.setState({
+          [`${name}loaded`]: true
+        });
       },
       () => {
         console.log(`${name} is not available`);
@@ -75,9 +85,9 @@ class Layout extends React.Component {
   };
 
   render() {
-    return (
-      <StaticQuery
-        query={graphql`
+    return ( <
+      StaticQuery query = {
+        graphql `
           query LayoutgQuery {
             pages: allMarkdownRemark(
               filter: { fileAbsolutePath: { regex: "//pages//" }, fields: { prefix: { regex: "/^\\d+$/" } } }
@@ -101,34 +111,69 @@ class Layout extends React.Component {
               html
             }
           }
-        `}
-        render={data => {
-          const { children } = this.props;
+        `
+      }
+      render = {
+        data => {
           const {
-            footnote: { html: footnoteHTML },
-            pages: { edges: pages }
+            children
+          } = this.props;
+          const {
+            footnote: {
+              html: footnoteHTML
+            },
+            pages: {
+              edges: pages
+            }
           } = data;
 
-          return (
-            <ThemeContext.Provider value={this.state.theme}>
-              <FontLoadedContext.Provider value={this.state.font400loaded}>
-                <ScreenWidthContext.Provider value={this.state.screenWidth}>
-                  <React.Fragment>
-                    <Header
-                      path={this.props.location.pathname}
-                      pages={pages}
-                      theme={this.state.theme}
-                    />
-                    <main>{children}</main>
-                    <Footer html={footnoteHTML} theme={this.state.theme} />
+          return ( <
+            ThemeContext.Provider value = {
+              this.state.theme
+            } >
+            <
+            FontLoadedContext.Provider value = {
+              this.state.font400loaded
+            } >
+            <
+            ScreenWidthContext.Provider value = {
+              this.state.screenWidth
+            } >
+            <
+            React.Fragment >
+            <
+            Header path = {
+              this.props.location.pathname
+            }
+            pages = {
+              pages
+            }
+            theme = {
+              this.state.theme
+            }
+            /> <
+            main > {
+              children
+            } < /main> <
+            Footer html = {
+              footnoteHTML
+            }
+            theme = {
+              this.state.theme
+            }
+            />
 
-                    {/* --- STYLES --- */}
-                    <style jsx>{`
+            {
+              /* --- STYLES --- */ } <
+            style jsx > {
+              `
                       main {
                         min-height: 80vh;
                       }
-                    `}</style>
-                    <style jsx global>{`
+                    `
+            } < /style> <
+            style jsx global > {
+              `
                       html {
                         box-sizing: border-box;
                       }
@@ -190,13 +235,15 @@ class Layout extends React.Component {
                       ::webkit-scrollbar-thumb {
                         background-color: #000000;
                       }
-                    `}</style>
-                  </React.Fragment>
-                </ScreenWidthContext.Provider>
-              </FontLoadedContext.Provider>
-            </ThemeContext.Provider>
+                    `
+            } < /style> <
+            /React.Fragment> <
+            /ScreenWidthContext.Provider> <
+            /FontLoadedContext.Provider> <
+            /ThemeContext.Provider>
           );
-        }}
+        }
+      }
       />
     );
   }

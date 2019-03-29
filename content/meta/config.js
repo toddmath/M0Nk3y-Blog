@@ -22,6 +22,7 @@ module.exports = {
   manifestBackgroundColor: "#ecebea",
   manifestThemeColor: "#255DC6",
   manifestDisplay: "standalone",
+  viewID: "182664403",
 
   // gravatar
   // Use your Gravatar image. If empty then will use src/images/jpg/avatar.jpg
@@ -31,9 +32,17 @@ module.exports = {
   gravatarImgMd5: "",
 
   // social
-  authorSocialLinks: [
-    { name: "github", url: "https://github.com/toddmath" },
-    { name: "twitter", url: "https://twitter.com/tM0Nk3y" },
-    { name: "facebook", url: "" }
+  authorSocialLinks: [{
+      name: "github",
+      url: "https://github.com/toddmath"
+    },
+    {
+      name: "twitter",
+      url: "https://twitter.com/tM0Nk3y"
+    },
+    {
+      name: "facebook",
+      url: ""
+    }
   ]
 };
