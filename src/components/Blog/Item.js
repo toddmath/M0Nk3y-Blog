@@ -130,8 +130,7 @@ const Item = props => {
           span {
             align-items: center;
             display: flex;
-            font-variant: small-caps;
-            margin: ${theme.space.xs} ${theme.space.s} ${theme.space.xs} 0;
+            margin: ${theme.space.s} ${theme.space.m} ${theme.space.m} 0;
           }
         }
 
@@ -190,7 +189,7 @@ const Item = props => {
           }
           h1 {
             font-size: 2.5em;
-            padding: ${`calc(${theme.space.default} * 1.2) calc(${theme.space.default} * 2) 0`};
+            padding: ${`calc(${theme.space.default} * 1.2) calc(${theme.space.default} * 1) 0`};
           }
           .meta {
             padding: ${`calc(${theme.space.default} * 1.5) calc(${theme.space.default} * 2)
@@ -202,19 +201,23 @@ const Item = props => {
           li {
             &:hover {
               border: 1px solid ${theme.line.color};
-              box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.03);
+              box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.077);
 
               &:after {
                 bottom: ${`calc(${theme.space.default} * -2.5)`};
               }
               :global(.gatsby-image-wrapper) {
-                transform: scale(1.2);
+                transform: scale(1.12);
               }
               h1 {
                 color: ${theme.blog.h1.hoverColor};
               }
+              :global(a:hover) {
+                color: ${theme.text.color.primary};
+              }
               :global(.arrow) {
                 opacity: 1;
+                fill: ${theme.color.brand.primary};
                 stroke: ${theme.color.brand.primary};
                 transform: translateX(0);
               }
@@ -224,13 +227,13 @@ const Item = props => {
             }
             :global(.arrow) {
               display: inline-block;
-              fill: ${theme.color.brand.primary};
-              stroke: ${theme.color.brand.primary};
+              fill: ${theme.blog.h1.hoverColor};
+              stroke: ${theme.blog.h1.hoverColor};
               stroke-width: 40;
               stroke-linecap: round;
               opacity: 0;
               transition: all ${theme.time.duration.card};
-              transform: translateX(-50%);
+              transform: translateX(-75%);
             }
           }
         }

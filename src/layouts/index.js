@@ -71,7 +71,7 @@ class Layout extends React.Component {
       weight: weight
     });
 
-    font.load(null, 10000).then(
+    font.load(null, 1000).then(
       () => {
         console.log(`${name} is available`);
         this.setState({
@@ -164,7 +164,8 @@ class Layout extends React.Component {
             />
 
             {
-              /* --- STYLES --- */ } <
+              /* --- STYLES --- */
+            } <
             style jsx > {
               `
                       main {
@@ -185,16 +186,15 @@ class Layout extends React.Component {
                         padding: 0;
                       }
                       body {
-                        font-family: ${this.state.font400loaded ? "Exo;" : "Verdana, sans-serif;"};
+                        font-family: ${this.state.font400loaded ? "Exo;" : "Arial, sans-serif;"};
                         font-size-adjust: 0.58;
                       }
                       h1,
                       h2,
                       h3 {
-                        font-family: ${this.state.font600loaded ? "Acme;" : "Verdana, sans-serif;"};
+                        font-family: ${this.state.font600loaded ? "Acme;" : "Arial, sans-serif;"};
                         font-weight: ${this.state.font600loaded ? 600 : 600};
-                        font-size-adjust: 0.58;
-                        line-height: 1.1;
+                        line-height: 1.5;
                         letter-spacing: -0.03em;
                         margin: 0;
                       }
@@ -209,7 +209,11 @@ class Layout extends React.Component {
                       }
                       a {
                         text-decoration: none;
-                        color: #666;
+                        color: #404040;
+                      }
+                      a:hover {
+                        color: #5a67d8;
+                        text-decoration: none;
                       }
                       main {
                         width: auto;
@@ -226,20 +230,20 @@ class Layout extends React.Component {
                       }
                       ::webkit-scrollbar {
                         width: 6px;
-                        background-color: #f5f5f5;
+                        background-color: #edf2f7;
                       }
                       ::webkit-scrollbar-track {
                         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-                        background-color: #f5f5f5;
+                        background-color: #edf2f7;
                       }
                       ::webkit-scrollbar-thumb {
                         background-color: #000000;
                       }
                     `
-            } < /style> <
-            /React.Fragment> <
-            /ScreenWidthContext.Provider> <
-            /FontLoadedContext.Provider> <
+            } < /style> < /
+            React.Fragment > <
+            /ScreenWidthContext.Provider> < /
+            FontLoadedContext.Provider > <
             /ThemeContext.Provider>
           );
         }

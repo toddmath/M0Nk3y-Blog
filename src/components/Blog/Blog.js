@@ -31,7 +31,7 @@ const Blog = props => {
         ul {
           list-style: none;
           margin: 0 auto;
-          padding: ${`calc(${theme.space.default} * 1.5) 0 calc(${theme.space.default} * 0.5)`};
+          padding: ${`calc(${theme.space.default} * 2.2) 0 calc(${theme.space.default} * 1.2)`};
         }
 
         @above tablet {

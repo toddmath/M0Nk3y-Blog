@@ -2,13 +2,25 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Bodytext = props => {
-  const { html, theme } = props;
+  const {
+    html,
+    theme
+  } = props;
 
-  return (
-    <React.Fragment>
-      <div className="bodytext" dangerouslySetInnerHTML={{ __html: html }} />
+  return ( <
+    React.Fragment >
+    <
+    div className = "bodytext"
+    dangerouslySetInnerHTML = {
+      {
+        __html: html
+      }
+    }
+    />
 
-      <style jsx>{`
+    <
+    style jsx > {
+      `
         .bodytext {
           animation-name: bodytextEntry;
           animation-duration: ${theme.time.duration.long};
@@ -19,17 +31,17 @@ const Bodytext = props => {
           }
 
           :global(h2) {
-            line-height: ${theme.font.lineHeight.s};
-            font-size: ${theme.font.size.l};
+            line-height: ${theme.font.lineHeight.l};
+            font-size: ${theme.font.size.xl};
           }
 
           :global(h3) {
-            font-size: ${theme.font.size.m};
-            line-height: ${theme.font.lineHeight.m};
+            font-size: ${theme.font.size.l};
+            line-height: ${theme.font.lineHeight.l};
           }
 
           :global(p) {
-            font-size: ${theme.font.size.s};
+            font-size: ${theme.font.size.m};
             line-height: ${theme.font.lineHeight.xxl};
             margin: 0 0 1.5em;
           }
@@ -43,9 +55,12 @@ const Bodytext = props => {
             line-height: 1.5;
           }
           :global(a) {
-            font-weight: ${theme.font.weight.bold};
+            font-weight: ${theme.font.weight.normal};
             color: ${theme.color.brand.primary};
-            text-decoration: underline;
+            text-decoration: none;
+          }
+          :global(a:hover) {
+            color: ${theme.color.brand.primaryActive};
           }
           :global(a.gatsby-resp-image-link) {
             border: 0;
@@ -56,11 +71,11 @@ const Bodytext = props => {
             border: 1px solid ${theme.line.color};
           }
           :global(code.language-text) {
-            background: ${theme.color.neutral.gray.c};
+            background: ${theme.color.neutral.gray.e};
             text-shadow: none;
             color: inherit;
             padding: 0.1em 0.3em 0.2em;
-            border-radius: 0.1em;
+            border-radius: ${theme.size.radius.default};
           }
         }
 
@@ -72,8 +87,9 @@ const Bodytext = props => {
             opacity: 1;
           }
         }
-      `}</style>
-    </React.Fragment>
+      `
+    } < /style> < /
+    React.Fragment >
   );
 };
 
