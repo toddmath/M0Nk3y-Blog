@@ -2,4 +2,4 @@
 title: author
 ---
 
-Todd Matheson's a 32 year old aspiring web developer 🖥.. Also, as the creator of this blog, he writes about things he's learned on his journey towards becoming a full stack developer. Check out his [tutorials](https://toddmath.com/category) or [github page](https://github.com/toddmath).
+I'm a 32 year old web development 🖥 student. As a fun project, I write and chronicle helpful stuff I've picked up on my journey towards becoming a front end developer. Check out other [tutorials](https://toddmath.com/category) or my [github page](https://github.com/toddmath).

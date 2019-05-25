@@ -1,4 +1,3 @@
-// @ts-nocheck
 import PropTypes from "prop-types";
 import React from "react";
 import { graphql } from "gatsby";
@@ -93,7 +92,7 @@ export const query = graphql`
             cover {
               children {
                 ... on ImageSharp {
-                  fluid(maxWidth: 800, maxHeight: 360) {
+                  fluid(maxWidth: 800, maxHeight: 360, quality: 60) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
@@ -111,17 +110,17 @@ export const query = graphql`
       }
     }
     bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 1200, quality: 50, cropFocus: ATTENTION) {
+      resize(width: 1200, quality: 90, cropFocus: CENTER) {
         src
       }
     }
     bgTablet: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 800, height: 1100, quality: 50, cropFocus: ATTENTION) {
+      resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
         src
       }
     }
     bgMobile: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 450, height: 850, quality: 50, cropFocus: ATTENTION) {
+      resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
         src
       }
     }

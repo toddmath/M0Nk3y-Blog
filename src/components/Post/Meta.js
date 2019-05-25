@@ -41,9 +41,8 @@ const Meta = props => {
           span {
             align-items: center;
             display: flex;
-            font-variant: small-caps;
-            font-weight: bold;
-            margin: ${theme.space.xs} ${theme.space.s} ${theme.space.xs} 0;
+            text-transform: uppercase;
+            margin: ${theme.space.xs} ${theme.space.m} ${theme.space.xs} 0;
           }
         }
         @from-width tablet {

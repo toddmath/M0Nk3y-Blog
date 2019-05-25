@@ -2,25 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Bodytext = props => {
-  const {
-    html,
-    theme
-  } = props;
+  const { html, theme } = props;
 
-  return ( <
-    React.Fragment >
-    <
-    div className = "bodytext"
-    dangerouslySetInnerHTML = {
-      {
-        __html: html
-      }
-    }
-    />
+  return (
+  <React.Fragment >
+    <div className = "bodytext" dangerouslySetInnerHTML = {{ __html: html }}/>
 
-    <
-    style jsx > {
-      `
+      <style jsx > {`
         .bodytext {
           animation-name: bodytextEntry;
           animation-duration: ${theme.time.duration.long};
@@ -87,9 +75,8 @@ const Bodytext = props => {
             opacity: 1;
           }
         }
-      `
-    } < /style> < /
-    React.Fragment >
+      `}</style>
+    </React.Fragment>
   );
 };
 

@@ -70,7 +70,7 @@ font:
   family:
     initial: "Arial, sans-serif"
     #initial: "Verdana"
-    target: &font-family-target "Exo"
+    target: &font-family-target "Poppins"
     targetHeading: &font-family-target-heading "Acme"
     # Trebuchet-based sans serif stack
     # target: &font-family-target "Segoe UI, Candara, Bitstream Vera Sans, #DejaVu Sans, Bitstream Vera Sans, Trebuchet MS, Verdana, Verdana Ref, #sans-serif"
@@ -102,8 +102,8 @@ font:
 time:
   duration:
     card: 400ms
-    default: 0.3s
-    long: 1.2s
+    default: 0.4s
+    long: 1s
 
 # GENERAL TOKENS
 background:
@@ -144,7 +144,6 @@ icon:
 hero:
   h1:
     family: *font-family-target-heading
-    fontVariant: upper-case
     size: *font-size-xxxl
     color: *color-gray-2
     lineHeight: *font-line-height-s

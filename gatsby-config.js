@@ -52,10 +52,10 @@ module.exports = {
     },
     twitterUsername: config.authorTwitterAccount,
     algolia: {
-      appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
-      searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY ?
-        process.env.ALGOLIA_SEARCH_ONLY_API_KEY : "",
-      indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
+      appId: '4RBKPCZPUO', //process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : ""
+      searchOnlyApiKey: 'e08b0f7996f33c87565d04c00a0ddc05', //process.env.ALGOLIA_SEARCH_ONLY_API_KEY ?
+        //process.env.ALGOLIA_SEARCH_ONLY_API_KEY : "",
+      indexName: 'CONTENT', //process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
     },
     facebook: {
       appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : ""
@@ -171,15 +171,6 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        // Setting a color is optional.
-        color: "#255DC6",
-        // Disable the loading spinner.
-        showSpinner: true
-      }
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
@@ -231,6 +222,7 @@ module.exports = {
         ]
       }
     },
+    /*
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
@@ -262,6 +254,7 @@ module.exports = {
         }
       }
     },
+    */
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
@@ -276,17 +269,6 @@ module.exports = {
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID
       }
-    },
-    {
-      resolve: `gatsby-plugin-guess-js`,
-      options: {
-        GAViewID: config.viewID,
-        minimumThreshold: 0.03,
-        period: {
-          startDate: new Date("2018-1-1"),
-          endDate: new Date(),
-        },
-      },
     },
     {
       resolve: `gatsby-plugin-feed`,

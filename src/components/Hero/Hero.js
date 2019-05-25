@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { FaAngleDown } from "react-icons/fa/";
+import { FaArrowDown } from "react-icons/fa/";
 
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
@@ -10,10 +10,10 @@ const Hero = props => {
     <React.Fragment>
       <section className="hero">
         <h1>
-          Front-End &nbsp; <strong>Web Development</strong> With Todd
+          Front-End&nbsp; <strong>Web Development</strong> With Todd
         </h1>
         <button onClick={scrollToContent} aria-label="scroll">
-          <FaAngleDown />
+          <FaArrowDown />
         </button>
       </section>
 
@@ -41,7 +41,7 @@ const Hero = props => {
           margin: ${theme.space.stack.l};
           color: ${theme.hero.h1.color};
           line-height: ${theme.hero.h1.lineHeight};
-          text-remove-gap: both 0 "Verdana";
+          text-remove-gap: both 0 "Poppins";
 
           :global(strong) {
             position: relative;
@@ -61,9 +61,9 @@ const Hero = props => {
         }
 
         button {
-          background: ${theme.color.brand.primaryActive};
+          background: ${theme.background.color.brand};
           border: 0;
-          border-radius: 25px 25px 55px 55px;
+          border-radius: 50%;
           font-size: ${theme.font.size.m};
           padding: ${theme.space.s} ${theme.space.m};
           cursor: pointer;
@@ -120,7 +120,7 @@ const Hero = props => {
           }
 
           h1 {
-            max-width: 75%;
+            max-width: 80%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.5)`};
           }
 

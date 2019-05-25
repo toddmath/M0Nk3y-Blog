@@ -1,15 +1,10 @@
+import "typeface-poppins";
 import FontFaceObserver from "fontfaceobserver";
 import PropTypes from "prop-types";
 import React from "react";
-import {
-  graphql,
-  StaticQuery
-} from "gatsby";
+import { graphql, StaticQuery } from "gatsby";
 
-import {
-  getScreenWidth,
-  timeoutThrottlerHandler
-} from "../utils/helpers";
+import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
 import Footer from "../components/Footer/";
 import Header from "../components/Header";
 
@@ -32,8 +27,8 @@ class Layout extends React.Component {
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont("font400", "Exo", 400);
-      this.loadFont("font600", "Acme", 600);
+      this.loadFont("font400", "Poppins", 400);
+      this.loadFont("font600", "Poppins", 600);
     }
   }
 
@@ -53,9 +48,7 @@ class Layout extends React.Component {
   };
 
   resizeHandler = () => {
-    this.setState({
-      screenWidth: getScreenWidth()
-    });
+    this.setState({ screenWidth: getScreenWidth() });
   };
 
   isHomePage = () => {
@@ -71,12 +64,10 @@ class Layout extends React.Component {
       weight: weight
     });
 
-    font.load(null, 1000).then(
+    font.load(null, 10000).then(
       () => {
         console.log(`${name} is available`);
-        this.setState({
-          [`${name}loaded`]: true
-        });
+        this.setState({ [`${name}loaded`]: true });
       },
       () => {
         console.log(`${name} is not available`);
@@ -85,9 +76,9 @@ class Layout extends React.Component {
   };
 
   render() {
-    return ( <
-      StaticQuery query = {
-        graphql `
+    return (
+      <StaticQuery
+      query = {graphql `
           query LayoutgQuery {
             pages: allMarkdownRemark(
               filter: { fileAbsolutePath: { regex: "//pages//" }, fields: { prefix: { regex: "/^\\d+$/" } } }
@@ -113,11 +104,8 @@ class Layout extends React.Component {
           }
         `
       }
-      render = {
-        data => {
-          const {
-            children
-          } = this.props;
+      render = {data => {
+      const {children} = this.props;
           const {
             footnote: {
               html: footnoteHTML
@@ -127,131 +115,99 @@ class Layout extends React.Component {
             }
           } = data;
 
-          return ( <
-            ThemeContext.Provider value = {
-              this.state.theme
-            } >
-            <
-            FontLoadedContext.Provider value = {
-              this.state.font400loaded
-            } >
-            <
-            ScreenWidthContext.Provider value = {
-              this.state.screenWidth
-            } >
-            <
-            React.Fragment >
-            <
-            Header path = {
-              this.props.location.pathname
-            }
-            pages = {
-              pages
-            }
-            theme = {
-              this.state.theme
-            }
-            /> <
-            main > {
-              children
-            } < /main> <
-            Footer html = {
-              footnoteHTML
-            }
-            theme = {
-              this.state.theme
-            }
-            />
+          return (
+          <ThemeContext.Provider value = {this.state.theme} >
+            <FontLoadedContext.Provider value = {this.state.font400loaded} >
+              <ScreenWidthContext.Provider value = {this.state.screenWidth} >
+                <React.Fragment>
+                  <Header
+                    path = {this.props.location.pathname}
+                    pages = {pages}
+                    theme = {this.state.theme}
+                  />
+                    <main>{children}</main>
+                    <Footer html = {footnoteHTML} theme = {this.state.theme}/>
 
-            {
-              /* --- STYLES --- */
-            } <
-            style jsx > {
-              `
-                      main {
-                        min-height: 80vh;
-                      }
-                    `
-            } < /style> <
-            style jsx global > {
-              `
-                      html {
-                        box-sizing: border-box;
-                      }
-                      *,
-                      *:after,
-                      *:before {
-                        box-sizing: inherit;
-                        margin: 0;
-                        padding: 0;
-                      }
-                      body {
-                        font-family: ${this.state.font400loaded ? "Exo;" : "Arial, sans-serif;"};
-                        font-size-adjust: 0.58;
-                      }
-                      h1,
-                      h2,
-                      h3 {
-                        font-family: ${this.state.font600loaded ? "Acme;" : "Arial, sans-serif;"};
-                        font-weight: ${this.state.font600loaded ? 600 : 600};
-                        line-height: 1.5;
-                        letter-spacing: -0.03em;
-                        margin: 0;
-                      }
-                      h1 {
-                        letter-spacing: -0.04em;
-                      }
-                      p {
-                        margin: 0;
-                      }
-                      strong {
-                        font-weight: ${this.state.font600loaded ? 600 : 600};
-                      }
-                      a {
-                        text-decoration: none;
-                        color: #404040;
-                      }
-                      a:hover {
-                        color: #5a67d8;
-                        text-decoration: none;
-                      }
-                      main {
-                        width: auto;
-                        display: block;
-                      }
-                      progress {
-                        vertical-align: baseline;
-                      }
-                      .scrollbar {
-                        overflow-y: scroll;
-                      }
-                      .force-overflow {
-                        min-height: 480px;
-                      }
-                      ::webkit-scrollbar {
-                        width: 6px;
-                        background-color: #edf2f7;
-                      }
-                      ::webkit-scrollbar-track {
-                        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-                        background-color: #edf2f7;
-                      }
-                      ::webkit-scrollbar-thumb {
-                        background-color: #000000;
-                      }
-                    `
-            } < /style> < /
-            React.Fragment > <
-            /ScreenWidthContext.Provider> < /
-            FontLoadedContext.Provider > <
-            /ThemeContext.Provider>
-          );
-        }
-      }
-      />
-    );
-  }
-}
+              {/* --- STYLES --- */}
+              <style jsx > {`
+                main {
+                  min-height: 80vh;
+                }
+                `}</style>
+              <style jsx global > {`
+                html {
+                  box-sizing: border-box;
+                }
+                *,
+                *:after,
+                *:before {
+                  box-sizing: inherit;
+                  margin: 0;
+                  padding: 0;
+                }
+                body {
+                  font-family: ${this.state.font400loaded ? "Poppins;" : "Arial, sans-serif;"};
+                }
+                h1,
+                h2,
+                h3 {
+                  font-family: ${this.state.font600loaded ? "Acme;" : "Arial, sans-serif;"};
+                  font-weight: ${this.state.font600loaded ? 600 : 600};
+                  line-height: 1.5;
+                  letter-spacing: -0.03em;
+                  margin: 0;
+                }
+                h1 {
+                  letter-spacing: -0.04em;
+                }
+                p {
+                  margin: 0;
+                }
+                strong {
+                  font-weight: ${this.state.font600loaded ? 600 : 600};
+                }
+                a {
+                  text-decoration: none;
+                  color: #404040;
+                }
+                a:hover {
+                  color: #5a67d8;
+                  text-decoration: none;
+                }
+                main {
+                  width: auto;
+                  display: block;
+                }
+                progress {
+                  vertical-align: baseline;
+                }
+                .scrollbar {
+                  overflow-y: scroll;
+                }
+                .force-overflow {
+                  min-height: 480px;
+                }
+                ::webkit-scrollbar {
+                  width: 6px;
+                  background-color: #edf2f7;
+                }
+                ::webkit-scrollbar-track {
+                  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                  background-color: #edf2f7;
+                }
+                ::webkit-scrollbar-thumb {
+                  background-color: #000000;
+                }
+              `}</style>
+              </React.Fragment>
+            </ScreenWidthContext.Provider>
+          </FontLoadedContext.Provider>
+        </ThemeContext.Provider>
+      );
+    }}
+  />
+  );
+}}
 
 Layout.propTypes = {
   children: PropTypes.object.isRequired,
