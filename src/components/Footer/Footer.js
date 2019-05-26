@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Footer = props => {
   const { html, theme } = props;
 
   return (
     <React.Fragment>
+    <PageTransition>
       <footer className="footer" dangerouslySetInnerHTML={{ __html: html }} />
 
       {/* --- STYLES --- */}
@@ -46,6 +48,7 @@ const Footer = props => {
           }
         }
       `}</style>
+      </PageTransition>
     </React.Fragment>
   );
 };

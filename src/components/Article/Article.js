@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Article = props => {
   const { children, theme } = props;
 
   return (
     <React.Fragment>
+    <PageTransition>
       <article className="article">{children}</article>
 
       {/* --- STYLES --- */}
@@ -29,6 +31,7 @@ const Article = props => {
           }
         }
       `}</style>
+      </PageTransition>
     </React.Fragment>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 import { FaArrowDown } from "react-icons/fa/";
 
@@ -8,6 +9,7 @@ const Hero = props => {
 
   return (
     <React.Fragment>
+    <PageTransition>
       <section className="hero">
         <h1>
           Front-End&nbsp; <strong>Web Development</strong> With Todd
@@ -129,6 +131,7 @@ const Hero = props => {
           }
         }
       `}</style>
+      </PageTransition>
     </React.Fragment>
   );
 };

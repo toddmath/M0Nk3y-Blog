@@ -6,6 +6,7 @@ import Img from "gatsby-image";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Item = props => {
   const {
@@ -26,6 +27,7 @@ const Item = props => {
 
   return (
     <React.Fragment>
+    <PageTransition>
       <li>
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
@@ -238,6 +240,7 @@ const Item = props => {
           }
         }
       `}</style>
+      </PageTransition>
     </React.Fragment>
   );
 };

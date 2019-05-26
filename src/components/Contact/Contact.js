@@ -13,6 +13,7 @@ import "antd/lib/form/style/index.css";
 import "antd/lib/input/style/index.css";
 import "antd/lib/button/style/index.css";
 import { ThemeContext } from "../../layouts";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Contact = props => {
   const { getFieldDecorator } = props.form;
@@ -55,6 +56,7 @@ const Contact = props => {
 
   return (
     <React.Fragment>
+    <PageTransition>
       <ThemeContext.Consumer>
         {theme => (
           <div className="form">
@@ -148,6 +150,7 @@ const Contact = props => {
           </div>
         )}
       </ThemeContext.Consumer>
+      </PageTransition>
     </React.Fragment>
   );
 };

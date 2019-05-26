@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const List = props => {
   const { edges, theme } = props;
 
   return (
     <React.Fragment>
+    <PageTransition>
       <ul>
         {edges.map(edge => {
           const {
@@ -37,6 +39,7 @@ const List = props => {
           line-height: ${theme.font.lineHeight.l};
         }
       `}</style>
+      </PageTransition>
     </React.Fragment>
   );
 };

@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 
 import { FaArrowRight } from "react-icons/fa/";
 import { FaArrowLeft } from "react-icons/fa/";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const NextPrev = props => {
   const {
@@ -20,6 +21,7 @@ const NextPrev = props => {
 
   return (
     <React.Fragment>
+    <PageTransition>
       <div className="links">
         {nextSlug && (
           <Link to={nextSlug}>
@@ -104,6 +106,7 @@ const NextPrev = props => {
           }
         }
       `}</style>
+      </PageTransition>
     </React.Fragment>
   );
 };

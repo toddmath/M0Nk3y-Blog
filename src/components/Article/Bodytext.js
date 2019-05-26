@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Bodytext = props => {
   const { html, theme } = props;
 
   return (
   <React.Fragment >
+  <PageTransition>
     <div className = "bodytext" dangerouslySetInnerHTML = {{ __html: html }}/>
 
       <style jsx > {`
@@ -76,6 +78,7 @@ const Bodytext = props => {
           }
         }
       `}</style>
+      </PageTransition>
     </React.Fragment>
   );
 };

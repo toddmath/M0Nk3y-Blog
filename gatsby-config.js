@@ -270,6 +270,12 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 600
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `

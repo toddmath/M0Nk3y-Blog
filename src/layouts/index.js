@@ -125,8 +125,10 @@ class Layout extends React.Component {
                     pages = {pages}
                     theme = {this.state.theme}
                   />
-                    <main>{children}</main>
-                    <Footer html = {footnoteHTML} theme = {this.state.theme}/>
+
+                      <main>{children}</main>
+
+                  <Footer html = {footnoteHTML} theme = {this.state.theme}/>
 
               {/* --- STYLES --- */}
               <style jsx > {`
@@ -196,7 +198,7 @@ class Layout extends React.Component {
                   background-color: #edf2f7;
                 }
                 ::webkit-scrollbar-thumb {
-                  background-color: #000000;
+                  background-color: #5a67d8;
                 }
               `}</style>
               </React.Fragment>

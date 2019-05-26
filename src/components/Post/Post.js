@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "prismjs/themes/prism-tomorrow.css";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 import asyncComponent from "../AsyncComponent";
 import Headline from "../Article/Headline";
@@ -35,6 +36,7 @@ const Post = props => {
 
   return (
     <React.Fragment>
+    <PageTransition>
       <header>
         <Headline title={title} theme={theme} />
         <Meta prefix={prefix} author={author} category={category} theme={theme} />
@@ -46,6 +48,7 @@ const Post = props => {
         <NextPrev next={nextPost} prev={prevPost} theme={theme} />
         <Comments slug={slug} facebook={facebook} theme={theme} />
       </footer>
+      </PageTransition>
     </React.Fragment>
   );
 };

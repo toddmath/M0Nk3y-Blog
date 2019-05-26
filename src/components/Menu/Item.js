@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Item = props => {
   const { theme, item: { label, to, icon: Icon } = {}, onClick } = props;
 
   return (
     <React.Fragment>
+    <PageTransition>
       <li className={"hiddenItem" in props ? "hiddenItem" : "item"} key={label}>
         <Link
           to={to}
@@ -92,6 +94,7 @@ const Item = props => {
           }
         }
       `}</style>
+      </PageTransition>
     </React.Fragment>
   );
 };

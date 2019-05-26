@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Headline = props => {
   const {
@@ -8,18 +9,13 @@ const Headline = props => {
     theme
   } = props;
 
-  return ( <
-    React.Fragment > {
-      title ? < h1 > {
-        title
-      } < /h1> : <h1>{children}</h1 >
-    }
+  return (
+  <React.Fragment>
+  <PageTransition>
+   { title ? <h1> { title } </h1> : <h>{children}</h> }
 
-    {
-      /* --- STYLES --- */
-    } <
-    style jsx > {
-      `
+    {/* --- STYLES --- */}
+    <style jsx>{`
         h1 {
           font-size: ${theme.font.size.xxl};
           margin: ${theme.space.stack.l};
@@ -60,9 +56,9 @@ const Headline = props => {
             font-size: ${`calc(${theme.font.size.xl} * 1.4)`};
           }
         }
-      `
-    } < /style> < /
-    React.Fragment >
+      `} </style>
+      </PageTransition>
+      </React.Fragment>
   );
 };
 

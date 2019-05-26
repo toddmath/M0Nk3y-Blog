@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import VisibilitySensor from "react-visibility-sensor";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 import { ScreenWidthContext, FontLoadedContext } from "../../layouts";
 import config from "../../../content/meta/config";
@@ -35,6 +36,7 @@ class Header extends React.Component {
 
     return (
       <React.Fragment>
+      <PageTransition>
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <div className="logo">
@@ -246,6 +248,7 @@ class Header extends React.Component {
             }
           }
         `}</style>
+        </PageTransition>
       </React.Fragment>
     );
   }

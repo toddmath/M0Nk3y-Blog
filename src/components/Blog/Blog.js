@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 import Item from "./Item";
 
@@ -8,6 +9,7 @@ const Blog = props => {
 
   return (
     <React.Fragment>
+    <PageTransition>
       <main className="main">
         <ul>
           {posts.map(post => {
@@ -48,6 +50,7 @@ const Blog = props => {
           }
         }
       `}</style>
+      </PageTransition>
     </React.Fragment>
   );
 };
