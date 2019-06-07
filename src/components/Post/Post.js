@@ -1,7 +1,8 @@
+/* eslint-disable react/require-default-props */
 import React from "react";
 import PropTypes from "prop-types";
+import "gatsby-remark-vscode-embed/style.css";
 import "prismjs/themes/prism-tomorrow.css";
-import PageTransition from 'gatsby-plugin-page-transitions';
 
 import asyncComponent from "../AsyncComponent";
 import Headline from "../Article/Headline";
@@ -13,13 +14,11 @@ import NextPrev from "./NextPrev";
 
 const Share = asyncComponent(() =>
   import("./Share")
-    .then(module => {
-      return module.default;
-    })
-    .catch(error => {})
+    .then((module) => module.default)
+    .catch((error) => {})
 );
 
-const Post = props => {
+const Post = (props) => {
   const {
     post,
     post: {
@@ -36,7 +35,6 @@ const Post = props => {
 
   return (
     <React.Fragment>
-    <PageTransition>
       <header>
         <Headline title={title} theme={theme} />
         <Meta prefix={prefix} author={author} category={category} theme={theme} />
@@ -48,18 +46,17 @@ const Post = props => {
         <NextPrev next={nextPost} prev={prevPost} theme={theme} />
         <Comments slug={slug} facebook={facebook} theme={theme} />
       </footer>
-      </PageTransition>
     </React.Fragment>
   );
 };
 
 Post.propTypes = {
-  post: PropTypes.object.isRequired,
+  post: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   authornote: PropTypes.string.isRequired,
-  facebook: PropTypes.object.isRequired,
-  next: PropTypes.object,
-  prev: PropTypes.object,
-  theme: PropTypes.object.isRequired
+  facebook: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  next: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  prev: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  theme: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default Post;

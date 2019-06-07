@@ -1,6 +1,7 @@
-//const webpack = require("webpack");
+/* eslint-disable default-case */
+// const webpack = require("webpack");
 const _ = require("lodash");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const path = require("path");
 const Promise = require("bluebird");
 
@@ -8,11 +9,15 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
+
   if (node.internal.type === `MarkdownRemark`) {
+    // prints each Markdown node on next 'gatsby develop' or 'yarn run develop'
+    console.log(JSON.stringify(node, undefined, 4)); // eslint-disable-line no-console
+
     const slug = createFilePath({ node, getNode });
     const fileNode = getNode(node.parent);
     const source = fileNode.sourceInstanceName;
-    const separtorIndex = ~slug.indexOf("--") ? slug.indexOf("--") : 0;
+    const separtorIndex = ~slug.indexOf("--") ? slug.indexOf("--") : 0; // eslint-disable-line no-bitwise
     const shortSlugStart = separtorIndex ? separtorIndex + 2 : 0;
 
     if (source !== "parts") {
@@ -43,18 +48,21 @@ exports.createPages = ({ graphql, actions }) => {
     const pageTemplate = path.resolve("./src/templates/PageTemplate.js");
     const categoryTemplate = path.resolve("./src/templates/CategoryTemplate.js");
 
-     // Do not create draft post files in production.
-     let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || "development"
-     console.log(`Using environment config: '${activeEnv}'`)
-     let filters = `filter: { fields: { slug: { ne: null } } }`;
-     if (activeEnv == "production") filters = `filter: { fields: { slug: { ne: null } , prefix: { ne: null } } }`
+    // Do not create draft post files in production.
+    const activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || "development";
+    console.log(`==>>> Using environment config: '${activeEnv}' <<<==`); // eslint-disable-line no-console
+    let filters = `filter: { fields: { slug: { ne: null } } }`;
+    if (activeEnv === "production")
+      filters = `filter: { fields: { slug: { ne: null } , prefix: { ne: null } } }`;
 
     resolve(
       graphql(
         `
           {
             allMarkdownRemark(
-              ` + filters + `
+              ` +
+          filters +
+          `
               sort: { fields: [fields___prefix], order: DESC }
               limit: 1000
             ) {
@@ -75,17 +83,17 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
-          console.log(result.errors);
+          console.log(result.errors); // eslint-disable-line no-console
           reject(result.errors);
         }
 
         const items = result.data.allMarkdownRemark.edges;
 
         // Create category list
-        const categorySet = new Set();
-        items.forEach(edge => {
+        const categorySet = new Set(); // eslint-disable-line compat/compat
+        items.forEach((edge) => {
           const {
             node: {
               frontmatter: { category }
@@ -98,8 +106,8 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // Create category pages
-        const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
+        const categoryList = Array.from(categorySet); // eslint-disable-line compat/compat
+        categoryList.forEach((category) => {
           createPage({
             path: `/category/${_.kebabCase(category)}/`,
             component: categoryTemplate,
@@ -110,12 +118,12 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // Create posts
-        const posts = items.filter(item => item.node.fields.source === "posts");
+        const posts = items.filter((item) => item.node.fields.source === "posts");
         posts.forEach(({ node }, index) => {
-          const slug = node.fields.slug;
+          const { slug } = node.fields;
           const next = index === 0 ? undefined : posts[index - 1].node;
           const prev = index === posts.length - 1 ? undefined : posts[index + 1].node;
-          const source = node.fields.source;
+          const { source } = node.fields;
 
           createPage({
             path: slug,
@@ -130,10 +138,10 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // and pages.
-        const pages = items.filter(item => item.node.fields.source === "pages");
+        const pages = items.filter((item) => item.node.fields.source === "pages");
         pages.forEach(({ node }) => {
-          const slug = node.fields.slug;
-          const source = node.fields.source;
+          const { slug } = node.fields;
+          const { source } = node.fields;
 
           createPage({
             path: slug,

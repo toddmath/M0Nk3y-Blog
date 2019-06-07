@@ -1,4 +1,15 @@
 {
   "printWidth": 100,
-  "singleQuote": false
+  "singleQuote": false,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "semi": true,
+  "jsxBracketSameLine": true,
+  "jsxSingleQuote": false,
+  "proseWrap": "never",
+  "extends": [
+    "prettier/react",
+    "prettier/standard",
+    "plugin:prettier/recommended"
+  ]
 }

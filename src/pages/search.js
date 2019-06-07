@@ -1,16 +1,15 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { graphql } from "gatsby";
-require("core-js/fn/array/find");
-
 import Article from "../components/Article";
 import Search from "../components/Search";
 import { ThemeContext } from "../layouts";
 import Seo from "../components/Seo";
+import AlgoliaIcon from "!svg-react-loader!../images/svg-icons/search-by-algolia.svg?name=AlgoliaLogo"; // eslint-disable-line import/no-webpack-loader-syntax
 
-import AlgoliaIcon from "!svg-react-loader!../images/svg-icons/search-by-algolia.svg?name=AlgoliaLogo";
+require("core-js/fn/array/find");
 
-const SearchPage = props => {
+const SearchPage = (props) => {
   const {
     data: {
       site: {
@@ -22,7 +21,7 @@ const SearchPage = props => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <Article theme={theme}>
             <div className="icon">
               <AlgoliaIcon />
@@ -35,27 +34,29 @@ const SearchPage = props => {
       <Seo facebook={facebook} />
 
       {/* --- STYLES --- */}
-      <style jsx>{`
-        .icon {
-          display: flex;
-          justify-content: flex-end;
-          margin-bottom: 20px;
-        }
-        .icon :global(svg) {
-          height: 30px;
-        }
-      `}</style>
+      <style jsx>
+        {`
+          .icon {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+          }
+          .icon :global(svg) {
+            height: 30px;
+          }
+        `}
+      </style>
     </React.Fragment>
   );
 };
 
 SearchPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default SearchPage;
 
-//eslint-disable-next-line no-undef
+// eslint-disable-next-line no-undef
 export const query = graphql`
   query SearchQuery {
     site {

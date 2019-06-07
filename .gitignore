@@ -147,3 +147,9 @@ public/
 
 # Gatsby env file (sensitive api's)
 .env
+
+# environment (production) file
+.env.production
+
+# environment (development) file
+.env.development

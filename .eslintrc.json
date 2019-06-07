@@ -5,7 +5,9 @@
     "prettier",
     "prettier/react",
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:compat/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2016,
@@ -14,7 +16,7 @@
       "jsx": true
     }
   },
-  "plugins": ["compat", "prettier", "react", "jsx-a11y", "import", "graphql"],
+  "plugins": ["compat", "react", "jsx-a11y", "import", "graphql", "prettier"],
   "env": {
     "browser": true,
     "es6": true,
@@ -29,7 +31,7 @@
     "import/no-extraneous-dependencies": "off",
     "no-console": "off",
     "no-multi-assign": "off",
-    "no-param-reassign": "warn",
+    "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-shadow": "warn",
     "no-underscore-dangle": "warn",
@@ -38,7 +40,26 @@
     "no-unused-vars": "warn",
     "prefer-destructuring": "off",
     "prettier/prettier": ["error"],
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "react/jsx-child-element-spacing": "warn",
+    "react/jsx-closing-bracket-location": [1, "after-props"],
+    "react/jsx-curly-spacing": [2, {"when": "never", "allowMultiline": false, "spacing": {"objectLiterals": "always"}}],
+    "react/jsx-equals-spacing": [2, "never"],
+    "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"] }],
+    "react/jsx-first-prop-new-line": ["warn", "multiline"],
+    "react/jsx-indent": [2, 2, {"indentLogicalExpressions": true}],
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-max-props-per-line": [1, {"when": "multiline"}],
+    "react/jsx-no-bind": [1],
+    "react/jsx-no-comment-textnodes": [1],
+    "react/jsx-no-duplicate-props": [2, {"ignoreCase": false}],
+    "react/jsx-no-literals": [1],
+    "react/jsx-no-target-blank": [1, {"enforceDynamicLinks": "always"}],
+    "react/jsx-props-no-multi-spaces": [1],
+    "react/forbid-prop-types": "off",
+    "forbid-prop-types": "off",
+    "consistent-return": "off",
+    "compat/compat": "warn"
   },
   "overrides": [
     {
@@ -47,5 +68,21 @@
         "no-unused-expressions": "off"
       }
     }
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "@^16.8.6"
+    },
+    "propWrapperFunctions": [
+      "forbidExtraProps",
+      {"property": "freeze", "object": "Object"},
+      {"property": "myFavoriteWrapper"}
+  ],
+  "linkComponents": [
+    "HyperLink",
+    {"name": "Link", "linkAttribute": "to"},
+    {"name": "AniLink", "linkAttribute": "to"}
   ]
+  }
 }

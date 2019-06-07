@@ -6,8 +6,12 @@ import Seo from "../components/Seo";
 import Article from "../components/Article";
 import Post from "../components/Post";
 import { ThemeContext } from "../layouts";
+import {
+  gatsbyImageSharpFluidPreferWebp,
+  gatsbyImageSharpFluidPreferWebpTracedSVG
+} from "../../.cache/fragments/image-sharp-fragments";
 
-const PostTemplate = props => {
+const PostTemplate = (props) => {
   const {
     data: {
       post,
@@ -22,7 +26,7 @@ const PostTemplate = props => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <Article theme={theme}>
             <Post
               post={post}
@@ -42,13 +46,13 @@ const PostTemplate = props => {
 };
 
 PostTemplate.propTypes = {
-  data: PropTypes.object.isRequired,
-  pageContext: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  pageContext: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default PostTemplate;
 
-//eslint-disable-next-line no-undef
+// eslint-disable-next-line no-undef
 export const postQuery = graphql`
   query PostBySlug($slug: String!) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -64,7 +68,7 @@ export const postQuery = graphql`
         category
         cover {
           childImageSharp {
-            resize(width: 300) {
+            fluid(maxWidth: 960) {
               src
             }
           }

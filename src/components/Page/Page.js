@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import PageTransition from 'gatsby-plugin-page-transitions';
 
 import Headline from "../Article/Headline";
 import Bodytext from "../Article/Bodytext";
 
-const Page = props => {
+const Page = (props) => {
   const {
     page: {
       html,
@@ -16,19 +15,17 @@ const Page = props => {
 
   return (
     <React.Fragment>
-    <PageTransition>
       <header>
         <Headline title={title} theme={theme} />
       </header>
       <Bodytext html={html} theme={theme} />
-      </PageTransition>
     </React.Fragment>
   );
 };
 
 Page.propTypes = {
-  page: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
+  page: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  theme: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default Page;

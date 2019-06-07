@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import VisibilitySensor from "react-visibility-sensor";
-import PageTransition from 'gatsby-plugin-page-transitions';
+// import Link from "gatsby-plugin-transition-link";
 
 import { ScreenWidthContext, FontLoadedContext } from "../../layouts";
 import config from "../../../content/meta/config";
@@ -15,7 +15,7 @@ class Header extends React.Component {
     fixed: false
   };
 
-  visibilitySensorChange = val => {
+  visibilitySensorChange = (val) => {
     if (val) {
       this.setState({ fixed: false });
     } else {
@@ -36,12 +36,11 @@ class Header extends React.Component {
 
     return (
       <React.Fragment>
-      <PageTransition>
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <div className="logo">
               <img
-                src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5}
+                src={config.gravatarImgMd5 === "" ? avatar : config.gravatarImgMd5}
                 alt={config.siteTitle}
               />
             </div>
@@ -51,9 +50,9 @@ class Header extends React.Component {
             </div>
           </Link>
           <FontLoadedContext.Consumer>
-            {loaded => (
+            {(loaded) => (
               <ScreenWidthContext.Consumer>
-                {width => (
+                {(width) => (
                   <Menu
                     path={path}
                     fixed={fixed}
@@ -72,137 +71,98 @@ class Header extends React.Component {
         </VisibilitySensor>
 
         {/* --- STYLES --- */}
-        <style jsx>{`
-          .header {
-            align-items: center;
-            justify-content: center;
-            background-color: ${theme.color.neutral.white};
-            display: flex;
-            height: ${theme.header.height.default};
-            position: relative;
-            top: 0;
-            width: 100%;
-            align-items: center;
-
-            :global(a.logoType) {
-              align-items: center;
-              display: flex;
-              flex-direction: "column";
-              color: ${theme.text.color.primary};
-
-              .logo {
-                flex-shrink: 0;
-              }
-            }
-
-            &.homepage {
-              position: absolute;
-              background-color: transparent;
-              height: ${theme.header.height.homepage};
-            }
-          }
-
-          h1 {
-            font-size: ${theme.font.size.m};
-            font-weight: ${theme.font.weight.standard};
-            margin: ${theme.space.stack.xs};
-          }
-
-          h2 {
-            font-weight: ${theme.font.weight.standard};
-            font-size: ${theme.font.size.xxs};
-            letter-spacing: 0;
-            margin: 0;
-          }
-
-          .logo {
-            border-radius: ${theme.size.radius.full};
-            border: 1px solid #eee;
-            display: inline-block;
-            height: 44px;
-            margin: ${theme.space.inline.default};
-            overflow: hidden;
-            width: 44px;
-            transition: all ${theme.time.duration.default};
-
-            .homepage & {
-              height: 60px;
-              width: 60px;
-            }
-
-            img {
-              width: 100%;
-            }
-          }
-
-          .sensor {
-            display: block;
-            position: absolute;
-            bottom: 0;
-            z-index: 1;
-            left: 0;
-            right: 0;
-            height: 1px;
-            top: ${path === "/" ? theme.header.height.homepage : theme.header.height.default};
-          }
-
-          @from-width tablet {
+        <style jsx>
+          {`
             .header {
-              padding: ${theme.space.inset.l};
+              align-items: center;
+              justify-content: center;
+              background-color: ${theme.color.neutral.white};
+              display: flex;
+              height: ${theme.header.height.default};
+              position: relative;
+              top: 0;
+              width: 100%;
+              align-items: center;
+              font-family: ${theme.font.family.targetHeading};
+
+              :global(a.logoType) {
+                align-items: center;
+                display: flex;
+                flex-direction: "column";
+                color: ${theme.text.color.primary};
+
+                .logo {
+                  flex-shrink: 0;
+                }
+              }
 
               &.homepage {
+                position: absolute;
+                background-color: transparent;
                 height: ${theme.header.height.homepage};
               }
             }
-          }
 
-          @below desktop {
-            .header.homepage {
-              .logo {
-                border: none;
+            h1 {
+              font-size: ${theme.font.size.l};
+              font-weight: ${theme.font.weight.standard};
+              margin: ${theme.space.stack.xs};
+            }
+
+            h2 {
+              font-weight: ${theme.font.weight.standard};
+              font-size: ${theme.font.size.xs};
+              letter-spacing: 0;
+              margin: 0;
+            }
+
+            .logo {
+              border-radius: ${theme.size.radius.full};
+              border: 1px solid ${theme.color.neutral.gray.b};
+              display: inline-block;
+              height: 44px;
+              margin: ${theme.space.inline.default};
+              overflow: hidden;
+              width: 44px;
+              transition: all ${theme.time.duration.default};
+
+              .homepage & {
+                height: 60px;
+                width: 60px;
               }
 
-              :global(a.logoType),
-              h1 {
-                color: ${theme.color.neutral.white};
-              }
-              h2 {
-                color: ${theme.color.neutral.gray.d};
+              img {
+                width: 100%;
               }
             }
-          }
 
-          @from-width desktop {
-            .header {
-              align-items: center;
-              background-color: ${theme.color.neutral.white};
-              display: flex;
+            .sensor {
+              display: block;
               position: absolute;
-              top: 0;
-              width: 100%;
-              justify-content: space-between;
-              transition: padding 0.5s;
+              bottom: 0;
+              z-index: 1;
+              left: 0;
+              right: 0;
+              height: 1px;
+              top: ${path === "/" ? theme.header.height.homepage : theme.header.height.default};
+            }
 
-              &.fixed {
-                height: ${theme.header.height.fixed};
-                background-color: ${theme.color.neutral.white};
-                left: 0;
-                padding: 0 ${theme.space.m};
-                position: fixed;
-                top: 0;
-                width: 100%;
-                z-index: 1;
+            @from-width tablet {
+              .header {
+                padding: ${theme.space.inset.l};
 
-                h1 {
-                  margin: ${theme.space.stack.xxs};
-                }
-
-                h2 {
-                  display: none;
+                &.homepage {
+                  height: ${theme.header.height.homepage};
                 }
               }
+            }
 
-              &.homepage:not(.fixed) {
+            @below desktop {
+              .header.homepage {
+                .logo {
+                  border: none;
+                }
+
                 :global(a.logoType),
                 h1 {
                   color: ${theme.color.neutral.white};
@@ -213,51 +173,92 @@ class Header extends React.Component {
               }
             }
 
-            .header :global(a.logoType) {
-              text-align: left;
-              flex-direction: row;
-              flex-shrink: 0;
-              width: auto;
-            }
+            @from-width desktop {
+              .header {
+                align-items: center;
+                background-color: ${theme.color.neutral.white};
+                display: flex;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                justify-content: space-between;
+                transition: padding 0.5s;
 
-            .logo {
-              margin: ${theme.space.inline.default};
+                &.fixed {
+                  height: ${theme.header.height.fixed};
+                  background-color: ${theme.color.neutral.white};
+                  left: 0;
+                  padding: 0 ${theme.space.m};
+                  position: fixed;
+                  top: 0;
+                  width: 100%;
+                  z-index: 1;
 
-              .fixed & {
-                height: 36px;
-                width: 36px;
+                  h1 {
+                    margin: ${theme.space.stack.xxs};
+                  }
+
+                  h2 {
+                    display: none;
+                  }
+                }
+
+                &.homepage:not(.fixed) {
+                  :global(a.logoType),
+                  h1 {
+                    color: ${theme.color.neutral.white};
+                  }
+                  h2 {
+                    color: ${theme.color.neutral.gray.d};
+                  }
+                }
               }
 
-              .header.homepage:not(.fixed) & {
-                border: none;
+              .header :global(a.logoType) {
+                text-align: left;
+                flex-direction: row;
+                flex-shrink: 0;
+                width: auto;
               }
-            }
 
-            h2 {
-              animation-duration: ${theme.time.duration.default};
-              animation-name: h2Entry;
-            }
+              .logo {
+                margin: ${theme.space.inline.default};
 
-            @keyframes h2Entry {
-              from {
-                opacity: 0;
+                .fixed & {
+                  height: 36px;
+                  width: 36px;
+                }
+
+                .header.homepage:not(.fixed) & {
+                  border: none;
+                }
               }
-              to {
-                opacity: 1;
+
+              h2 {
+                animation-duration: ${theme.time.duration.default};
+                animation-name: h2Entry;
+              }
+
+              @keyframes h2Entry {
+                from {
+                  opacity: 0;
+                }
+                to {
+                  opacity: 1;
+                }
               }
             }
-          }
-        `}</style>
-        </PageTransition>
+          `}
+        </style>
       </React.Fragment>
     );
   }
 }
 
 Header.propTypes = {
-  pages: PropTypes.array.isRequired,
+  pages: PropTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
   path: PropTypes.string.isRequired,
-  theme: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default Header;

@@ -9,7 +9,7 @@ import Seo from "../components/Seo";
 class IndexPage extends React.Component {
   separator = React.createRef();
 
-  scrollToContent = e => {
+  scrollToContent = (e) => {
     this.separator.current.scrollIntoView({ block: "start", behavior: "smooth" });
   };
 
@@ -41,7 +41,7 @@ class IndexPage extends React.Component {
     return (
       <React.Fragment>
         <ThemeContext.Consumer>
-          {theme => (
+          {(theme) => (
             <Hero scrollToContent={this.scrollToContent} backgrounds={backgrounds} theme={theme} />
           )}
         </ThemeContext.Consumer>
@@ -49,29 +49,31 @@ class IndexPage extends React.Component {
         <hr ref={this.separator} />
 
         <ThemeContext.Consumer>
-          {theme => <Blog posts={posts} theme={theme} />}
+          {(theme) => <Blog posts={posts} theme={theme} />}
         </ThemeContext.Consumer>
 
         <Seo facebook={facebook} />
 
-        <style jsx>{`
-          hr {
-            margin: 0;
-            border: 0;
-          }
-        `}</style>
+        <style jsx>
+          {`
+            hr {
+              margin: 0;
+              border: 0;
+            }
+          `}
+        </style>
       </React.Fragment>
     );
   }
 }
 
 IndexPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default IndexPage;
 
-//eslint-disable-next-line no-undef
+// eslint-disable-next-line no-undef
 export const query = graphql`
   query IndexQuery {
     posts: allMarkdownRemark(
@@ -92,7 +94,7 @@ export const query = graphql`
             cover {
               children {
                 ... on ImageSharp {
-                  fluid(maxWidth: 800, maxHeight: 360, quality: 60) {
+                  fluid(maxWidth: 800, maxHeight: 360, quality: 75) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
@@ -120,11 +122,11 @@ export const query = graphql`
       }
     }
     bgMobile: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
+      resize(width: 450, height: 850, quality: 75, cropFocus: CENTER) {
         src
       }
     }
   }
 `;
 
-//hero-background
+// hero-background

@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 require("dotenv").config();
 const config = require("./content/meta/config");
 const transformer = require("./src/utils/algolia");
@@ -21,14 +22,12 @@ const query = `{
   }
 }`;
 
-const queries = [{
-  query,
-  transformer: ({
-    data
-  }) => {
-    return data.allMarkdownRemark.edges.reduce(transformer, []);
+const queries = [
+  {
+    query,
+    transformer: ({ data }) => data.allMarkdownRemark.edges.reduce(transformer, [])
   }
-}];
+];
 
 module.exports = {
   // pathPrefix: config.pathPrefix,
@@ -53,7 +52,9 @@ module.exports = {
     twitterUsername: config.authorTwitterAccount,
     algolia: {
       appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
-      searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY : "",
+      searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+        ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+        : "",
       indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
     },
     facebook: {
@@ -63,12 +64,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
     `gatsby-plugin-styled-jsx-postcss`, // as above
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve(`./src/layouts/`)
-      }
-    },
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
@@ -111,12 +106,13 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [{
+        plugins: [
+          {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 960,
               backgroundColor: "transparent",
-              wrapperStyle: "margin-bottom:10px; margin-color:#255DC6;",
+              wrapperStyle: "margin-color: #4299e1;",
               quality: "50",
               withWebp: "true"
             }
@@ -127,6 +123,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 2em`
             }
           },
+          `gatsby-remark-vscode-embed`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -183,7 +180,10 @@ module.exports = {
         background_color: config.manifestBackgroundColor,
         theme_color: config.manifestThemeColor,
         display: config.manifestDisplay,
-        icons: [{
+        include_favicon: true,
+        cache_busting_mode: `query`,
+        icons: [
+          {
             src: "/icons/icon-48x48.png",
             sizes: "48x48",
             type: "image/png"
@@ -254,14 +254,6 @@ module.exports = {
       }
     },
     */
-    {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        google: {
-          families: ["Exo", "Acme"]
-        }
-      }
-    },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -270,10 +262,10 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-page-transitions',
+      resolve: `gatsby-plugin-layout`,
       options: {
-        transitionTime: 600
-      },
+        component: require.resolve(`./src/layouts/`)
+      }
     },
     {
       resolve: `gatsby-plugin-feed`,
@@ -290,25 +282,22 @@ module.exports = {
             }
           }
         `,
-        feeds: [{
-          serialize: ({
-            query: {
-              site,
-              allMarkdownRemark
-            }
-          }) => {
-            return allMarkdownRemark.edges.map(edge => {
-              return Object.assign({}, edge.node.frontmatter, {
-                description: edge.node.excerpt,
-                url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                custom_elements: [{
-                  "content:encoded": edge.node.html
-                }]
-              });
-            });
-          },
-          query: `
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.edges.map((edge) =>
+                Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [
+                    {
+                      "content:encoded": edge.node.html
+                    }
+                  ]
+                })
+              ),
+            query: `
               {
                 allMarkdownRemark(
                   limit: 1000,
@@ -331,8 +320,9 @@ module.exports = {
                 }
               }
             `,
-          output: "/rss.xml"
-        }]
+            output: "/rss.xml"
+          }
+        ]
       }
     },
     {
@@ -345,14 +335,7 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-netlify",
-      options: {
-        allPageHeaders: [
-          "Link: </static/icons/icon-48x48.png; rel=preload; as=image",
-          "Link: </images/app-icons/icon.png; rel=preload; as=image",
-          "Link: </images/jpg/avatar.jpg; rel=preload; as=image"
-        ]
-      }
+      resolve: "gatsby-plugin-netlify"
     }
   ]
 };

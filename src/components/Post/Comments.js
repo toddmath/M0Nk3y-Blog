@@ -4,7 +4,7 @@ import FacebookProvider, { Comments as FBComments } from "react-facebook";
 
 import config from "../../../content/meta/config";
 
-const Comments = props => {
+const Comments = (props) => {
   const { facebook, slug, theme } = props;
 
   return (
@@ -16,19 +16,21 @@ const Comments = props => {
       </div>
 
       {/* --- STYLES --- */}
-      <style jsx>{`
-        .comments {
-          margin: 0 -8px ${theme.space.default};
-        }
-      `}</style>
+      <style jsx>
+        {`
+          .comments {
+            margin: 0 -8px ${theme.space.default};
+          }
+        `}
+      </style>
     </React.Fragment>
   );
 };
 
 Comments.propTypes = {
   slug: PropTypes.string.isRequired,
-  facebook: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
+  facebook: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  theme: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default Comments;

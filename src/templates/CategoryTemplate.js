@@ -8,7 +8,7 @@ import Article from "../components/Article";
 import Headline from "../components/Article/Headline";
 import List from "../components/List";
 
-const CategoryTemplate = props => {
+const CategoryTemplate = (props) => {
   const {
     pageContext: { category },
     data: {
@@ -22,7 +22,7 @@ const CategoryTemplate = props => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <Article theme={theme}>
             <header>
               <Headline theme={theme}>
@@ -30,11 +30,8 @@ const CategoryTemplate = props => {
                 {category}
               </Headline>
               <p className="meta">
-                There {totalCount > 1 ? "are" : "is"} <strong>{totalCount}</strong> post{totalCount >
-                1
-                  ? "s"
-                  : ""}{" "}
-                in the category.
+                There {totalCount > 1 ? "are" : "is"} <strong>{totalCount}</strong> post
+                {totalCount > 1 ? "s" : ""} in the category.
               </p>
               <List edges={edges} theme={theme} />
             </header>
@@ -48,8 +45,8 @@ const CategoryTemplate = props => {
 };
 
 CategoryTemplate.propTypes = {
-  data: PropTypes.object.isRequired,
-  pageContext: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  pageContext: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default CategoryTemplate;

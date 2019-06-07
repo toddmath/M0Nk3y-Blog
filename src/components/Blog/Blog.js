@@ -1,18 +1,16 @@
 import PropTypes from "prop-types";
 import React from "react";
-import PageTransition from 'gatsby-plugin-page-transitions';
 
 import Item from "./Item";
 
-const Blog = props => {
+const Blog = (props) => {
   const { posts, theme } = props;
 
   return (
     <React.Fragment>
-    <PageTransition>
       <main className="main">
         <ul>
-          {posts.map(post => {
+          {posts.map((post) => {
             const {
               node,
               node: {
@@ -25,39 +23,40 @@ const Blog = props => {
       </main>
 
       {/* --- STYLES --- */}
-      <style jsx>{`
-        .main {
-          padding: 0 ${theme.space.inset.default};
-        }
-
-        ul {
-          list-style: none;
-          margin: 0 auto;
-          padding: ${`calc(${theme.space.default} * 2.2) 0 calc(${theme.space.default} * 1.2)`};
-        }
-
-        @above tablet {
+      <style jsx>
+        {`
           .main {
-            padding: 0 ${`0 calc(${theme.space.default} * 1.5)`};
+            padding: 0 ${theme.space.inset.default};
           }
+
           ul {
-            max-width: ${theme.text.maxWidth.tablet};
+            list-style: none;
+            margin: 0 auto;
+            padding: ${`calc(${theme.space.default} * 2.2) 0 calc(${theme.space.default} * 1.2)`};
           }
-        }
-        @above desktop {
-          ul {
-            max-width: ${theme.text.maxWidth.desktop};
+
+          @above tablet {
+            .main {
+              padding: 0 ${`0 calc(${theme.space.default} * 1.5)`};
+            }
+            ul {
+              max-width: ${theme.text.maxWidth.tablet};
+            }
           }
-        }
-      `}</style>
-      </PageTransition>
+          @above desktop {
+            ul {
+              max-width: ${theme.text.maxWidth.desktop};
+            }
+          }
+        `}
+      </style>
     </React.Fragment>
   );
 };
 
 Blog.propTypes = {
-  posts: PropTypes.array.isRequired,
-  theme: PropTypes.object.isRequired
+  posts: PropTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
+  theme: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default Blog;

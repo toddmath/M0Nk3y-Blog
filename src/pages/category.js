@@ -1,3 +1,7 @@
+/* eslint-disable no-var */
+/* eslint-disable vars-on-top */
+/* eslint-disable guard-for-in */
+/* eslint-disable no-restricted-syntax */
 import { FaTag } from "react-icons/fa/";
 import PropTypes from "prop-types";
 import React from "react";
@@ -8,7 +12,7 @@ import Headline from "../components/Article/Headline";
 import List from "../components/List";
 import Seo from "../components/Seo";
 
-const CategoryPage = props => {
+const CategoryPage = (props) => {
   const {
     data: {
       posts: { edges: posts },
@@ -20,7 +24,7 @@ const CategoryPage = props => {
 
   // Create category list
   const categories = {};
-  posts.forEach(edge => {
+  posts.forEach((edge) => {
     const {
       node: {
         frontmatter: { category }
@@ -44,12 +48,12 @@ const CategoryPage = props => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <Article theme={theme}>
             <header>
               <Headline title="Posts by categories" theme={theme} />
             </header>
-            {categoryList.map(item => (
+            {categoryList.map((item) => (
               <section key={item[0]}>
                 <h2>
                   <FaTag /> {item[0]}
@@ -58,15 +62,17 @@ const CategoryPage = props => {
               </section>
             ))}
             {/* --- STYLES --- */}
-            <style jsx>{`
-              h2 {
-                margin: 0 0 0.5em;
-              }
-              h2 :global(svg) {
-                height: 0.8em;
-                fill: ${theme.color.special.attention};
-              }
-            `}</style>
+            <style jsx>
+              {`
+                h2 {
+                  margin: 0 0 0.5em;
+                }
+                h2 :global(svg) {
+                  height: 0.8em;
+                  fill: ${theme.color.special.attention};
+                }
+              `}
+            </style>
           </Article>
         )}
       </ThemeContext.Consumer>
@@ -77,12 +83,12 @@ const CategoryPage = props => {
 };
 
 CategoryPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default CategoryPage;
 
-//eslint-disable-next-line no-undef
+// eslint-disable-next-line no-undef
 export const query = graphql`
   query PostsQuery {
     posts: allMarkdownRemark(

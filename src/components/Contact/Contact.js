@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-closing-bracket-location */
+/* eslint-disable react/forbid-prop-types */
 /* eslint no-unused-vars: 0 */
 
 import { navigate } from "gatsby";
@@ -7,20 +9,20 @@ import Input from "antd/lib/input";
 import PropTypes from "prop-types";
 import React from "react";
 
-const FormItem = Form.Item;
-const { TextArea } = Input;
 import "antd/lib/form/style/index.css";
 import "antd/lib/input/style/index.css";
 import "antd/lib/button/style/index.css";
 import { ThemeContext } from "../../layouts";
-import PageTransition from 'gatsby-plugin-page-transitions';
 
-const Contact = props => {
+const FormItem = Form.Item;
+const { TextArea } = Input;
+
+const Contact = (props) => {
   const { getFieldDecorator } = props.form;
 
   function encode(data) {
     return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
   }
 
@@ -28,7 +30,7 @@ const Contact = props => {
     e.preventDefault();
     props.form.validateFields((err, values) => {
       if (!err) {
-        console.log("Received values of form: ", values);
+        console.log("Received values of form: ", values); // eslint-disable-line no-console
         sendMessage(values);
       }
     });
@@ -41,31 +43,29 @@ const Contact = props => {
       body: encode({ "form-name": "contact", ...values })
     })
       .then(() => {
-        console.log("Form submission success");
+        console.log("Form submission success"); // eslint-disable-line no-console
         navigate("/success");
       })
-      .catch(error => {
-        console.error("Form submission error:", error);
+      .catch((error) => {
+        console.error("Form submission error:", error); // eslint-disable-line no-console
         this.handleNetworkError();
       });
   }
 
   function handleNetworkError(e) {
-    console.log("submit Error");
+    console.log("submit Error"); // eslint-disable-line no-console
   }
 
   return (
     <React.Fragment>
-    <PageTransition>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <div className="form">
             <Form
               name="contact"
               onSubmit={handleSubmit}
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
-            >
+              data-netlify-honeypot="bot-field">
               <FormItem label="Name">
                 {getFieldDecorator("name", {
                   rules: [
@@ -104,59 +104,60 @@ const Contact = props => {
             </Form>
 
             {/* --- STYLES --- */}
-            <style jsx>{`
-              .form {
-                background: transparent;
-              }
-              .form :global(.ant-row.ant-form-item) {
-                margin: 0 0 1em;
-              }
-              .form :global(.ant-row.ant-form-item:last-child) {
-                margin-top: 1em;
-              }
-              .form :global(.ant-form-item-control) {
-                line-height: 1em;
-              }
-              .form :global(.ant-form-item-label) {
-                line-height: 1em;
-                margin-bottom: 0.5em;
-              }
-              .form :global(.ant-form-item) {
-                margin: 0;
-              }
-              .form :global(.ant-input) {
-                appearance: none;
-                height: auto;
-                font-size: 1.2em;
-                padding: 0.5em 0.6em;
-              }
-              .form :global(.ant-btn-primary) {
-                height: auto;
-                font-size: 1.2em;
-                padding: 0.5em 3em;
-                background: ${theme.color.brand.primary};
-                border: 1px solid ${theme.color.brand.primary};
-              }
-              .form :global(.ant-form-explain) {
-                margin-top: 0.2em;
-              }
-
-              @from-width desktop {
-                .form :global(input) {
-                  max-width: 50%;
+            <style jsx>
+              {`
+                .form {
+                  background: transparent;
                 }
-              }
-            `}</style>
+                .form :global(.ant-row.ant-form-item) {
+                  margin: 0 0 1em;
+                }
+                .form :global(.ant-row.ant-form-item:last-child) {
+                  margin-top: 1em;
+                }
+                .form :global(.ant-form-item-control) {
+                  line-height: 1em;
+                }
+                .form :global(.ant-form-item-label) {
+                  line-height: 1em;
+                  margin-bottom: 0.5em;
+                }
+                .form :global(.ant-form-item) {
+                  margin: 0;
+                }
+                .form :global(.ant-input) {
+                  appearance: none;
+                  height: auto;
+                  font-size: 1.2em;
+                  padding: 0.5em 0.6em;
+                }
+                .form :global(.ant-btn-primary) {
+                  height: auto;
+                  font-size: 1.2em;
+                  padding: 0.5em 3em;
+                  background: ${theme.color.brand.primary};
+                  border: 1px solid ${theme.color.brand.primary};
+                }
+                .form :global(.ant-form-explain) {
+                  margin-top: 0.2em;
+                }
+
+                @from-width desktop {
+                  .form :global(input) {
+                    max-width: 50%;
+                  }
+                }
+              `}
+            </style>
           </div>
         )}
       </ThemeContext.Consumer>
-      </PageTransition>
     </React.Fragment>
   );
 };
 
 Contact.propTypes = {
-  form: PropTypes.object
+  form: PropTypes.object // eslint-disable-line react/require-default-props
 };
 
 const ContactForm = Form.create({})(Contact);

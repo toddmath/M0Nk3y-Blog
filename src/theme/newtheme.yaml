@@ -71,7 +71,7 @@ font:
     initial: "Arial, sans-serif"
     #initial: "Verdana"
     target: &font-family-target "Poppins"
-    targetHeading: &font-family-target-heading "Acme"
+    targetHeading: &font-family-target-heading "IBM Plex mono"
     # Trebuchet-based sans serif stack
     # target: &font-family-target "Segoe UI, Candara, Bitstream Vera Sans, #DejaVu Sans, Bitstream Vera Sans, Trebuchet MS, Verdana, Verdana Ref, #sans-serif"
     # target: &font-family-target "Open Sans, Avenir Next, Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif"
@@ -102,7 +102,8 @@ font:
 time:
   duration:
     card: 400ms
-    default: 0.4s
+    default: 0.33s
+    medium: 0.5s
     long: 1s
 
 # GENERAL TOKENS
@@ -153,7 +154,7 @@ blog:
     family: *font-family-target-heading
     size: *font-size-xxxl
     lineHeight: *font-line-height-xxl
-    hoverColor: *color-gray-5
+    hoverColor: *color-gray-6
 header:
   height:
     default: 80px

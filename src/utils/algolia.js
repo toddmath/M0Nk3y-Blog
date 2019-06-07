@@ -1,3 +1,5 @@
+/* eslint-disable arrow-body-style */
+/* eslint-disable func-names */
 module.exports = function(chunksTotal, { node }) {
   const {
     fields: { slug },

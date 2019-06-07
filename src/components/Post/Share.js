@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-closing-bracket-location */
 import React from "react";
 import PropTypes from "prop-types";
 import {
@@ -16,7 +17,7 @@ import {
 
 import config from "../../../content/meta/config";
 
-const PostShare = props => {
+const PostShare = (props) => {
   const {
     post: {
       fields: { slug },
@@ -29,7 +30,7 @@ const PostShare = props => {
   const url = config.siteUrl + config.pathPrefix + slug;
 
   const iconSize = 36;
-  const filter = count => (count > 0 ? count : "");
+  const filter = (count) => (count > 0 ? count : "");
 
   return (
     <React.Fragment>
@@ -41,19 +42,17 @@ const PostShare = props => {
             title={title}
             additionalProps={{
               "aria-label": "Twitter share"
-            }}
-          >
+            }}>
             <TwitterIcon round size={iconSize} />
           </TwitterShareButton>
           <GooglePlusShareButton
             url={url}
             additionalProps={{
               "aria-label": "Google share"
-            }}
-          >
+            }}>
             <GooglePlusIcon round size={iconSize} />
             <GooglePlusShareCount url={url}>
-              {count => <div className="share-count">{filter(count)}</div>}
+              {(count) => <div className="share-count">{filter(count)}</div>}
             </GooglePlusShareCount>
           </GooglePlusShareButton>
           <FacebookShareButton
@@ -61,11 +60,10 @@ const PostShare = props => {
             quote={`${title} - ${excerpt}`}
             additionalProps={{
               "aria-label": "Facebook share"
-            }}
-          >
+            }}>
             <FacebookIcon round size={iconSize} />
             <FacebookShareCount url={url}>
-              {count => <div className="share-count">{filter(count)}</div>}
+              {(count) => <div className="share-count">{filter(count)}</div>}
             </FacebookShareCount>
           </FacebookShareButton>
           <LinkedinShareButton
@@ -74,57 +72,58 @@ const PostShare = props => {
             description={excerpt}
             additionalProps={{
               "aria-label": "LinkedIn share"
-            }}
-          >
+            }}>
             <LinkedinIcon round size={iconSize} />
             <LinkedinShareCount url={url}>
-              {count => <div className="share-count">{filter(count)}</div>}
+              {(count) => <div className="share-count">{filter(count)}</div>}
             </LinkedinShareCount>
           </LinkedinShareButton>
         </div>
       </div>
 
       {/* --- STYLES --- */}
-      <style jsx>{`
-        .share {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .links {
-          display: flex;
-          flex-direction: row;
-
-          :global(.SocialMediaShareButton) {
-            margin: 0 0.8em;
-            cursor: pointer;
-          }
-        }
-
-        .label {
-          font-size: 1.2em;
-          margin: 0 1em 1em;
-        }
-
-        @from-width tablet {
+      <style jsx>
+        {`
           .share {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .links {
+            display: flex;
             flex-direction: row;
-            margin: ${theme.space.inset.l};
+
+            :global(.SocialMediaShareButton) {
+              margin: 0 0.8em;
+              cursor: pointer;
+            }
           }
+
           .label {
-            margin: ${theme.space.inline.m};
+            font-size: 1.2em;
+            margin: 0 1em 1em;
           }
-        }
-      `}</style>
+
+          @from-width tablet {
+            .share {
+              flex-direction: row;
+              margin: ${theme.space.inset.l};
+            }
+            .label {
+              margin: ${theme.space.inline.m};
+            }
+          }
+        `}
+      </style>
     </React.Fragment>
   );
 };
 
 PostShare.propTypes = {
-  post: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  theme: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default PostShare;

@@ -1,3 +1,8 @@
+/* eslint-disable react/no-danger */
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/jsx-curly-brace-presence */
+/* eslint-disable jsx-a11y/html-has-lang */
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -11,7 +16,7 @@ export default class HTML extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           {this.props.headComponents}
           <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="#255DC6" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="#9f7aea" />
           <meta name="apple-mobile-web-app-title" content="Lazywill" />
           <meta
             name="google-site-verification"

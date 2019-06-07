@@ -1,9 +1,11 @@
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/jsx-closing-bracket-location */
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import config from "../../../content/meta/config";
 
-const Seo = props => {
+const Seo = (props) => {
   const { data, facebook } = props;
   const postTitle = ((data || {}).frontmatter || {}).title;
   const postDescription = ((data || {}).frontmatter || {}).description;
@@ -11,8 +13,8 @@ const Seo = props => {
   const postSlug = ((data || {}).fields || {}).slug;
 
   const title = postTitle ? `${postTitle} - ${config.shortSiteTitle}` : config.siteTitle;
-  const description = postDescription ? postDescription : config.siteDescription;
-  const image = postCover ? postCover : config.siteImage;
+  const description = postDescription ? postDescription : config.siteDescription; // eslint-disable-line no-unneeded-ternary
+  const image = postCover ? postCover : config.siteImage; // eslint-disable-line no-unneeded-ternary
   const url = config.siteUrl + config.pathPrefix + postSlug;
 
   return (
@@ -20,8 +22,7 @@ const Seo = props => {
       htmlAttributes={{
         lang: config.siteLanguage,
         prefix: "og: http://ogp.me/ns#"
-      }}
-    >
+      }}>
       {/* General tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -43,8 +44,8 @@ const Seo = props => {
 };
 
 Seo.propTypes = {
-  data: PropTypes.object,
-  facebook: PropTypes.object.isRequired
+  data: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  facebook: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default Seo;

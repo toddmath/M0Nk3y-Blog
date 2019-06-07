@@ -6,17 +6,18 @@ function asyncComponent(getComponent, loadingComponent) {
 
     componentDidMount() {
       if (!this.state.component) {
-        getComponent().then(component => {
+        getComponent().then((component) => {
           this.setState({ component });
         });
       }
     }
+
     render() {
       const { component: Comp } = this.state;
       if (Comp) {
         return <Comp {...this.props} />;
       }
-      return loadingComponent ? loadingComponent : <div>Loading...</div>;
+      return loadingComponent ? loadingComponent : <div>Loading...</div>; // eslint-disable-line no-unneeded-ternary
     }
   };
 }

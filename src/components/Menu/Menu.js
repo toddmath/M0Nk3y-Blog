@@ -1,7 +1,7 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable react/sort-comp */
 import React from "react";
 import PropTypes from "prop-types";
-require("core-js/fn/array/from");
-
 import { FaHome } from "react-icons/fa/";
 import { FaSearch } from "react-icons/fa/";
 import { FaEnvelope } from "react-icons/fa/";
@@ -10,12 +10,14 @@ import { FaTag } from "react-icons/fa/";
 import Item from "./Item";
 import Expand from "./Expand";
 
+require("core-js/fn/array/from");
+
 class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.itemList = React.createRef();
 
-    const pages = props.pages.map(page => ({
+    const pages = props.pages.map((page) => ({
       to: page.node.fields.slug,
       label: page.node.frontmatter.menuTitle
         ? page.node.frontmatter.menuTitle
@@ -43,8 +45,8 @@ class Menu extends React.Component {
     fixed: PropTypes.bool.isRequired,
     screenWidth: PropTypes.number.isRequired,
     fontLoaded: PropTypes.bool.isRequired,
-    pages: PropTypes.array.isRequired,
-    theme: PropTypes.object.isRequired
+    pages: PropTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
+    theme: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
   };
 
   componentDidMount() {
@@ -84,7 +86,7 @@ class Menu extends React.Component {
         item.classList.remove("hideItem");
 
         const currentCumulativeWidth = result.cumulativeWidth + item.offsetWidth;
-        result.cumulativeWidth = currentCumulativeWidth;
+        result.cumulativeWidth = currentCumulativeWidth; // eslint-disable-line no-param-reassign
 
         if (!item.classList.contains("more") && currentCumulativeWidth > maxWidth) {
           const link = item.querySelector("a");
@@ -101,14 +103,14 @@ class Menu extends React.Component {
       { visibleItems: [], cumulativeWidth: 0, hiddenItems: [] }
     );
 
-    this.setState(prevState => ({ hiddenItems: menu.hiddenItems }));
+    this.setState((prevState) => ({ hiddenItems: menu.hiddenItems }));
   };
 
-  toggleMenu = e => {
+  toggleMenu = (e) => {
     e.preventDefault();
 
     if (this.props.screenWidth < 1024) {
-      this.renderedItems.map(item => {
+      this.renderedItems.map((item) => {
         const oldClass = this.state.open ? "showItem" : "hideItem";
         const newClass = this.state.open ? "hideItem" : "showItem";
 
@@ -119,16 +121,16 @@ class Menu extends React.Component {
       });
     }
 
-    this.setState(prevState => ({ open: !prevState.open }));
+    this.setState((prevState) => ({ open: !prevState.open }));
   };
 
-  closeMenu = e => {
-    //e.preventDefault();
+  closeMenu = (e) => {
+    // e.preventDefault();
 
     if (this.state.open) {
       this.setState({ open: false });
       if (this.props.screenWidth < 1024) {
-        this.renderedItems.map(item => {
+        this.renderedItems.map((item) => {
           if (item.classList.contains("showItem")) {
             item.classList.add("hideItem");
             item.classList.remove("item");
@@ -146,7 +148,7 @@ class Menu extends React.Component {
       <React.Fragment>
         <nav className={`menu ${open ? "open" : ""}`} rel="js-menu">
           <ul className="itemList" ref={this.itemList}>
-            {this.items.map(item => (
+            {this.items.map((item) => (
               <Item item={item} key={item.label} icon={item.icon} theme={theme} />
             ))}
           </ul>
@@ -154,7 +156,7 @@ class Menu extends React.Component {
           {open &&
             screenWidth >= 1024 && (
               <ul className="hiddenItemList">
-                {this.state.hiddenItems.map(item => (
+                {this.state.hiddenItems.map((item) => (
                   <Item item={item} key={item.label} hiddenItem theme={theme} />
                 ))}
               </ul>
@@ -162,7 +164,8 @@ class Menu extends React.Component {
         </nav>
 
         {/* --- STYLES --- */}
-        <style jsx>{`
+        <style jsx>
+          {`
           .menu {
             align-items: center;
             background: ${theme.color.neutral.white};
@@ -194,15 +197,15 @@ class Menu extends React.Component {
               &::after {
                 position: absolute;
                 content: "";
-                left: ${theme.space.m};
-                right: ${theme.space.m};
+                left: ${theme.space.s};
+                right: ${theme.space.s};
                 top: 0;
                 height: 1px;
                 background: ${theme.color.brand.primary};
               }
 
               &.open {
-                padding: ${theme.space.inset.m};
+                padding: ${theme.space.inset.s};
               }
 
               :global(.homepage):not(.fixed) & {
@@ -238,7 +241,7 @@ class Menu extends React.Component {
               display: flex;
               flex-direction: column;
               justify-content: flex-start;
-              padding: ${theme.space.m};
+              padding: ${theme.space.s};
               border-radius: ${theme.size.radius.small};
               border-top-right-radius: 0;
 
@@ -274,7 +277,8 @@ class Menu extends React.Component {
               }
             }
           }
-        `}</style>
+        `}
+        </style>
       </React.Fragment>
     );
   }
