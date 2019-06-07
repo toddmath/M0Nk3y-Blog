@@ -113,8 +113,9 @@ module.exports = {
               maxWidth: 960,
               backgroundColor: "transparent",
               wrapperStyle: "margin-color: #4299e1;",
-              quality: "50",
-              withWebp: "true"
+              quality: "60",
+              withWebp: "true",
+              tracedSVG: "true"
             }
           },
           {
