@@ -6,8 +6,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
-// import Link from 'gatsby-plugin-transition-link'
-
 const Item = (props) => {
   const { theme, item: { label, to, icon: Icon } = {}, onClick } = props;
 
@@ -41,7 +39,7 @@ const Item = (props) => {
 
             :global(svg) {
               margin: 0 ${theme.space.inset.xs} 0 0;
-              opacity: 0.3;
+              opacity: 0.35;
             }
           }
 
@@ -55,7 +53,7 @@ const Item = (props) => {
                 color: ${theme.text.color.primary};
                 padding: ${theme.space.inset.s};
                 transition: all ${theme.time.duration.default};
-                border-radius: ${theme.size.radius.small};
+                border-radius: ${theme.size.radius.default};
               }
 
               :global(.homepage):not(.fixed) & :global(a) {
@@ -63,7 +61,7 @@ const Item = (props) => {
               }
 
               :global(a:hover) {
-                color: ${theme.color.brand.primary};
+                color: ${theme.color.brand.light};
                 background: color(white alpha(-60%));
               }
 
@@ -72,7 +70,7 @@ const Item = (props) => {
               }
 
               &:hover :global(svg) {
-                fill: ${theme.color.brand.primary};
+                fill: ${theme.color.brand.lightActive};
                 opacity: 1;
 
                 :global(.hero) & :global(svg) {

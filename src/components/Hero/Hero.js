@@ -71,7 +71,7 @@ const Hero = (props) => {
           }
 
           button {
-            background: ${theme.background.color.brand};
+            background: ${theme.color.brand.dark};
             border: 0;
             border-radius: ${theme.size.radius.large};
             font-size: ${theme.font.size.m};
@@ -84,10 +84,10 @@ const Hero = (props) => {
 
             &:focus {
               outline-style: none;
-              background: ${theme.color.brand.primary.active};
             }
 
             &:hover {
+              background: ${theme.color.brand.darkActive};
               border-radius: ${theme.size.radius.full};
               transition: ${theme.time.duration.medium} ease-in-out all;
             }
@@ -96,7 +96,7 @@ const Hero = (props) => {
               position: relative;
               top: 15px;
               fill: ${theme.color.neutral.white};
-              stroke-width: 40;
+              stroke-width: 80;
               stroke: ${theme.color.neutral.white};
               animation-duration: ${theme.time.duration.long};
               animation-name: buttonIconMove;

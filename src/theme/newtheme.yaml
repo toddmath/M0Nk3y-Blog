@@ -104,7 +104,7 @@ time:
     card: 400ms
     default: 0.33s
     medium: 0.5s
-    long: 1s
+    long: 1.2s
 
 # GENERAL TOKENS
 background:

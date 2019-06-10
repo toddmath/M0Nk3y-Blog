@@ -30,7 +30,7 @@
     "gatsby-remark-emojis": "^0.3.2",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^3.0.14",
-    "gatsby-remark-prismjs": "^3.2.10",
+    "gatsby-remark-prismjs": "^3.2.11",
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-remark-smartypants": "^2.0.9",
     "gatsby-remark-vscode-embed": "^1.0.4",

@@ -28,14 +28,14 @@ const List = (props) => {
       <style jsx>
         {`
           ul {
-            margin: ${theme.space.stack.m};
-            padding: ${theme.space.m};
+            margin: ${theme.space.stack.xxl};
+            padding: ${theme.space.l};
             list-style: circle;
           }
           li {
             padding: ${theme.space.xs} 0;
             font-size: ${theme.font.size.s};
-            line-height: ${theme.font.lineHeight.l};
+            line-height: ${theme.font.lineHeight.m};
           }
         `}
       </style>
