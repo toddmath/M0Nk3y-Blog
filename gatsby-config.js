@@ -51,14 +51,11 @@ module.exports = {
     },
     twitterUsername: config.authorTwitterAccount,
     algolia: {
-      appId: "4RBKPCZPUO",
-      searchOnlyApiKey: "e08b0f7996f33c87565d04c00a0ddc05",
-      indexName: "CONTENT"
-      // appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
-      // searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
-      // ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
-      // : "",
-      // indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
+      appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
+      searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+        ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+        : "",
+      indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
     },
     facebook: {
       appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : ""
