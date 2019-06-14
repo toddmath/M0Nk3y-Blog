@@ -3,16 +3,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import {
   FacebookShareButton,
-  GooglePlusShareButton,
   LinkedinShareButton,
   TwitterShareButton,
+  PocketShareButton,
+  RedditShareButton,
+  EmailShareButton,
   FacebookShareCount,
-  GooglePlusShareCount,
-  LinkedinShareCount,
+  RedditShareCount,
   FacebookIcon,
   TwitterIcon,
-  GooglePlusIcon,
-  LinkedinIcon
+  LinkedinIcon,
+  RedditIcon,
+  EmailIcon,
+  PocketIcon
 } from "react-share";
 
 import config from "../../../content/meta/config";
@@ -45,16 +48,6 @@ const PostShare = (props) => {
             }}>
             <TwitterIcon round size={iconSize} />
           </TwitterShareButton>
-          <GooglePlusShareButton
-            url={url}
-            additionalProps={{
-              "aria-label": "Google share"
-            }}>
-            <GooglePlusIcon round size={iconSize} />
-            <GooglePlusShareCount url={url}>
-              {(count) => <div className="share-count">{filter(count)}</div>}
-            </GooglePlusShareCount>
-          </GooglePlusShareButton>
           <FacebookShareButton
             url={url}
             quote={`${title} - ${excerpt}`}
@@ -74,10 +67,28 @@ const PostShare = (props) => {
               "aria-label": "LinkedIn share"
             }}>
             <LinkedinIcon round size={iconSize} />
-            <LinkedinShareCount url={url}>
-              {(count) => <div className="share-count">{filter(count)}</div>}
-            </LinkedinShareCount>
           </LinkedinShareButton>
+          <PocketShareButton
+            url={url}
+            additionalProps={{
+              "aria-label": "Pocket share"
+            }}>
+            <PocketIcon round size={iconSize} />
+          </PocketShareButton>
+          <RedditShareButton
+            url={url}
+            title={title}
+            additionalProps={{
+              "aria-label": "Reddit share"
+            }}>
+            <RedditIcon round size={iconSize} />
+            <RedditShareCount url={url}>
+              {(count) => <div className="share-count">{filter(count)}</div>}
+            </RedditShareCount>
+          </RedditShareButton>
+          <EmailShareButton url={url} subject={title} body={excerpt}>
+            <EmailIcon round size={iconSize} />
+          </EmailShareButton>
         </div>
       </div>
 

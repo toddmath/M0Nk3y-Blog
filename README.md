@@ -4,14 +4,6 @@
 
 <hr>
 
-<p align="center">
-
-<img src="https://media.githubusercontent.com/media/toddmath/M0Nk3y-Blog/master/static/screens/demo.gif" width="90%" alt="Demo Gif of homepage" title="Demo">
-</img>
-
-</p>
-
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ef905ea7-921c-4183-87e1-9525ec7b5d2a/deploy-status)](https://app.netlify.com/sites/toddmath/deploys)
 
 

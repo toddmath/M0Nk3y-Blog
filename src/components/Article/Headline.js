@@ -15,7 +15,7 @@ const Headline = (props) => {
             font-size: ${theme.font.size.xxl};
             margin: ${theme.space.stack.m};
             animation-name: headlineEntry;
-            animation-duration: ${theme.time.duration.long};
+            animation-duration: ${theme.time.duration.medium};
 
             :global(span) {
               font-weight: ${theme.font.weight.standard};
@@ -27,7 +27,7 @@ const Headline = (props) => {
 
             :global(svg) {
               height: 0.75em;
-              fill: ${theme.color.brand.primary};
+              fill: ${theme.color.brand.primaryActive};
             }
           }
 
@@ -48,7 +48,7 @@ const Headline = (props) => {
 
           @from-width desktop {
             h1 {
-              font-size: ${`calc(${theme.font.size.xl} * 1.8)`};
+              font-size: ${`calc(${theme.font.size.xxl} * 1.4)`};
             }
           }
         `}
