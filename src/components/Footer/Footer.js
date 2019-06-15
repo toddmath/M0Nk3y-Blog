@@ -14,9 +14,11 @@ const Footer = (props) => {
         {`
           .footer {
             background: ${theme.color.neutral.white};
-            padding: ${theme.space.inset.default};
+            padding: ${theme.space.inset.s};
             padding-top: 0;
             padding-bottom: 120px;
+            font-family: ${theme.font.family.target};
+            color: ${theme.color.neutral.gray.i};
 
             :global(ul) {
               list-style: none;
@@ -24,20 +26,11 @@ const Footer = (props) => {
               padding: 0;
 
               :global(li) {
-                color: ${theme.color.neutral.gray.a};
-                font-size: ${theme.font.size.xxs};
-                padding: ${theme.space.xxs} ${theme.space.s};
+                color: ${theme.color.special.attention};
+                font-size: ${theme.font.size.s};
+                padding: ${theme.space.inline.m};
                 position: relative;
                 display: inline-block;
-
-                &::after {
-                  content: "•";
-                  position: absolute;
-                  right: ${`calc(${theme.space.xs} * -1)`};
-                }
-                &:last-child::after {
-                  content: "";
-                }
               }
             }
           }

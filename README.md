@@ -1,124 +1,61 @@
-<h1 align="center"> Todd Matheson's Blog 🐒M0Nk3y WebDev</h1>
-<h2 align="center">🚀 https://www.toddmath.com ⚛️</h2>
-
-
-<hr>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ef905ea7-921c-4183-87e1-9525ec7b5d2a/deploy-status)](https://app.netlify.com/sites/toddmath/deploys)
-
-
-## Table Of Contents
-
-<!--- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
-<details>
-<summary>Click to expand</summary>
-<hr>
-
-- [Author](#author)
-
-- [Features](#features)
-
-- [Gatsby Plugins](#plugins)
-
-</details>
-
-<!-- AUTO-GENERATED-CONTENT:END -->
-
-
-## <a name="author"></a>Author
-
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
-
-<details>
-<summary>Todd Matheson</summary>
-<hr>
-
-<p>I'm a 32 year old aspiring web developer and created this blog for the hands on experiance and as a platform to share some usefull knowledge I gain on my journey towards full stack development. The site is very new, and extremely bare bones at the moment, but I'll be adding more content very soon, so be sure to check back in the near future. I hope you learn something usefull and enjoy my site!!
+<h1 align="center">Welcome to toddmath.com frontend web development blog 👋</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000&style=for-the-badge" />
+  <a href="https://github.com/toddmath/M0Nk3y-Blog#readme">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?style=for-the-badge&logo=read-the-docs" target="_blank" />
+  </a>
+  <a href="https://spdx.org/licenses/GPL-3.0-or-later.html#licenseText">
+    <img alt="License: GPL-3.0-or-later" src="https://img.shields.io/badge/License-GPL3-yellow.svg?style=for-the-badge" target="_blank" />
+  </a>
+  <a href="https://www.gatsbyjs.org"><img alt="Gatsby.js v2" src="https://img.shields.io/badge/Gatsby-v2-blueviolet.svg?style=for-the-badge&logo=Gatsby" target="_blank" />
+  </a>
 </p>
-
-</details>
-
-<!-- AUTO-GENERATED-CONTENT:END -->
-
-
-## <a name="features"></a>Features
-
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
-
-<details>
-<summary><img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" verticak-align="sub" width="60"/>
-</summary>
 
 <p align="center">
-  <a href="https://gatsbyjs.org">
-
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60"/></img>
-
- </a>
-</p>
-
-<h1 align="center">
-  Gatsby v2
-  </h1>
-<h3 align="center">
-  ⚛️ 📄 🚀
-</h3>
-<p align="center">
-  <strong>Blazing fast modern site generator for React</strong><br>
-  Go beyond static sites: build blogs, e-commerce sites, full-blown apps, and more with Gatsby.
- </p>
- <p align="center">
-<a href="https://www.npmjs.org/package/gatsby">
-    <img src="https://img.shields.io/npm/v/gatsby.svg" alt="Current npm package version." />
-  </a>
-<a href="https://npmcharts.com/compare/gatsby?minimal=true">
-    <img src="https://img.shields.io/npm/dm/gatsby.svg" alt="Downloads per month on npm." />
-  </a>
-<a href="https://npmcharts.com/compare/gatsby?minimal=true">
-    <img src="https://img.shields.io/npm/dt/gatsby.svg" alt="Total downloads on npm." />
-  </a>
-<a href="https://gatsbyjs.org/docs/how-to-contribute">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://app.netlify.com/sites/ef905ea7-921c-4183-87e1-9525ec7b5d2a/deploy-status">
+    <img src="https://api.netlify.com/api/v1/badges/ef905ea7-921c-4183-87e1-9525ec7b5d2a/deploy-status" alt="Netlify build status">
   </a>
 </p>
-</details>
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+> toddmath.com frontend web development blog created with [Gatsby.js](https://gatsbyjs.org) v2
 
-## <a name="plugins"></a>Gatsby Plugins
+### 🏠 [Homepage](https://toddmath.com)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+## Prerequisites
 
-<details>
-<summary>List of Gatsby plugins used</summary>
+- yarn &gt;=1.16.0
+- node &gt;=10.16.0
 
->
-* **gatsby-plugin-styled-jsx**
-* **gatsby-plugin-styled-jsx-postcss**
-* **gatsby-plugin-layout**
-* **gatsby-plugin-algolia**
-* **gatsby-source-filesystem**
-* **gatsby-transformer-remark**
-* **gatsby-plugin-sharp**
-* **gatsby-remark-images**
-* **gatsby-remark-responsive-iframe**
-* **gatsby-remark-prismjs**
-* **gatsby-remark-copy-linked-files**
-* **gatsby-remark-smartypants**
-* **gatsby-remark-emojis**
-* **gatsby-plugin-sharp**
-* **gatsby-transformer-sharp**
-* **gatsby-plugin-react-helmet**
-* **gatsby-plugin-catch-links**
-* **gatsby-plugin-manifest**
-* **gatsby-plugin-favicon**
-* **gatsby-plugin-web-font-loader**
-* **gatsby-plugin-offline**
-* **gatsby-plugin-google-analytics**
-* **gatsby-plugin-feed**
-* **gatsby-plugin-sitemap**
-* **gatsby-plugin-react-svg**
-* **gatsby-plugin-netlify**
-</details>
+## Install
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+```sh
+yarn install
+```
+
+## Run local developer server
+
+```sh
+yarn run develop
+```
+
+<img src="https://media2.giphy.com/media/rEbJjSjoS8qYM/giphy.gif?cid=790b76115d042c197a3561716bdc4b14&rid=giphy.gif" width="300" height="400" alt="pwn" title="pwn">
+
+
+## Author
+
+👤 **Todd Matheson**
+
+* Twitter: [@tM0Nk3y](https://twitter.com/@tM0Nk3y)
+* Github: [@toddmath](https://github.com/toddmath)
+
+## Show your support
+
+Give a ⭐️ if this project helped you !
+
+## 📝 License
+
+Copyright © 2019 [Todd Matheson](https://github.com/toddmath).<br />
+This project is [GPL-3.0-or-later](https://spdx.org/licenses/GPL-3.0-or-later.html#licenseText) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

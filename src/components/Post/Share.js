@@ -100,6 +100,7 @@ const PostShare = (props) => {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin: ${theme.space.m} auto ${theme.space.xs};
           }
 
           .links {
@@ -107,20 +108,34 @@ const PostShare = (props) => {
             flex-direction: row;
 
             :global(.SocialMediaShareButton) {
-              margin: 0 0.8em;
+              margin: 0 ${theme.space.s};
               cursor: pointer;
             }
           }
 
           .label {
-            font-size: 1.2em;
-            margin: 0 1em 1em;
+            font-family: ${theme.font.family.targetHeading};
+            font-weight: ${theme.font.weight.bold};
+            font-size: ${theme.font.size.xl};
+            margin: ${theme.space.stack.s};
+            color: ${theme.text.color.brand};
           }
 
           @from-width tablet {
             .share {
               flex-direction: row;
-              margin: ${theme.space.inset.l};
+              margin: ${theme.space.xl} auto ${theme.space.xs};
+            }
+            .label {
+              font-size: ${theme.font.size.xxl};
+              margin: ${theme.space.inline.s};
+            }
+          }
+
+          @from-width desktop {
+            .share {
+              flex-direction: row;
+              margin: ${theme.space.xl} auto ${theme.space.s};
             }
             .label {
               margin: ${theme.space.inline.m};
