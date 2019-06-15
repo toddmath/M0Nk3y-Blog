@@ -23,7 +23,7 @@
 
 ## Prerequisites
 
-- yarn &gt;=1.16.0
+- npm &gt;=6.9.0
 - node &gt;=10.16.0
 
 ## Install

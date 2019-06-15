@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 /* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable react/forbid-prop-types */
 /* eslint no-unused-vars: 0 */

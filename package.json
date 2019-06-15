@@ -13,7 +13,7 @@
   ],
   "license": "GPL-3.0-or-later",
   "engines": {
-    "yarn": ">=1.16.0",
+    "npm": ">=6.9.0",
     "node": ">=10.16.0"
   },
   "dependencies": {

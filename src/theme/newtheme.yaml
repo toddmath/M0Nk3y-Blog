@@ -30,6 +30,7 @@ space:
     s: 0 10px 0 0
     m: 0 20px 0 0
     l: 0 40px 0 0
+    xl: 0 60px 0 0
 # SIZE
 size:
   radius:
