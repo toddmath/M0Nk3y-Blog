@@ -159,7 +159,7 @@ class Layout extends React.Component {
                             : "Arial, sans-serif;"};
                           font-weight: ${this.state.font600loaded ? 600 : 600};
                           line-height: 1.5;
-                          letter-spacing: -0.03em;
+                          letter-spacing: -0.035em;
                           margin: 0;
                         }
                         h1 {

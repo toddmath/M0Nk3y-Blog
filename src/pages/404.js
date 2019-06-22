@@ -1,10 +1,19 @@
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/no-unused-prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 
-const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
-);
+import StopIcon from "!svg-react-loader!../images/svg-icons/stop.svg"; // eslint-disable-line import/no-webpack-loader-syntax
+import "./404.css";
+
+const NotFoundPage = () => {
+  return (
+    <div className="wrapper">
+      <StopIcon className="icon" />
+      <h1>404</h1>
+      <h2>Page Not Found</h2>
+    </div>
+  );
+};
 
 export default NotFoundPage;
