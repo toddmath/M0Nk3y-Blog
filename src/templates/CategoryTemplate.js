@@ -26,8 +26,10 @@ const CategoryTemplate = (props) => {
           <Article theme={theme}>
             <header>
               <Headline theme={theme}>
-                <span>Posts in category</span> <FaTag />
-                {category}
+                <h1>
+                  <span>Posts in category</span> <FaTag className="icon_tag" />
+                  {category}
+                </h1>
               </Headline>
               <p className="meta">
                 There {totalCount > 1 ? "are" : "is"} <strong>{totalCount}</strong> post
@@ -40,6 +42,21 @@ const CategoryTemplate = (props) => {
       </ThemeContext.Consumer>
 
       <Seo facebook={facebook} />
+      {/* -- STYLES -- */}
+      <style jsx>
+        {`
+          :global(.icon_tag) {
+            fill: #5a67d8;
+            height: 1em;
+          }
+          h1 :global(svg) {
+            height: 0.8em;
+          }
+          .meta {
+            color: #3182ce;
+          }
+        `}
+      </style>
     </React.Fragment>
   );
 };

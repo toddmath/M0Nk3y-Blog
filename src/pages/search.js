@@ -40,9 +40,17 @@ const SearchPage = (props) => {
             display: flex;
             justify-content: flex-end;
             margin-bottom: 20px;
+            margin-top: 20px;
           }
           .icon :global(svg) {
-            height: 30px;
+            height: 26px;
+            text-align: center;
+            margin: 0 auto;
+          }
+          @below tablet {
+            .icon {
+              margin-top: 10px;
+            }
           }
         `}
       </style>

@@ -68,8 +68,8 @@ const CategoryPage = (props) => {
                   margin: 0 0 0.5em;
                 }
                 h2 :global(svg) {
-                  height: 0.8em;
-                  fill: ${theme.color.special.attention};
+                  height: 1em;
+                  fill: ${theme.color.brand.primaryActive};
                 }
               `}
             </style>

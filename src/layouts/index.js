@@ -1,7 +1,5 @@
 /* eslint-disable react/sort-comp */
 /* eslint-disable react/no-unused-prop-types */
-import "typeface-poppins";
-import "typeface-ibm-plex-mono";
 import FontFaceObserver from "fontfaceobserver";
 import PropTypes from "prop-types";
 import React from "react";
@@ -13,6 +11,9 @@ import Header from "../components/Header";
 
 import themeObjectFromYaml from "../theme/newtheme.yaml";
 
+require("typeface-poppins");
+require("typeface-ibm-plex-mono");
+
 export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
 export const FontLoadedContext = React.createContext(false);
@@ -22,16 +23,20 @@ class Layout extends React.Component {
     super();
 
     this.state = {
-      font400loaded: false,
-      font600loaded: false,
+      font400_bodyloaded: false,
+      // font600_bodyloaded: false,
+      font600_headerloaded: false,
+      font400_headerloaded: false,
       screenWidth: 0,
       headerMinimized: false, // eslint-disable-line react/no-unused-state
       theme: themeObjectFromYaml
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont("font400", "Poppins", 400);
-      this.loadFont("font600", "Poppins", 600);
+      this.loadFont("font400_body", "Poppins", 400);
+      this.loadFont("font600_body", "Poppins", 600);
+      this.loadFont("font600_header", "IBM Plex Mono", 600);
+      this.loadFont("font400_header", "IBM Plex Mono", 400);
     }
   }
 
@@ -65,7 +70,7 @@ class Layout extends React.Component {
       weight: weight // eslint-disable-line object-shorthand
     });
 
-    font.load(null, 10000).then(
+    font.load(null, 4000).then(
       () => {
         console.log(`${name} is available`); // eslint-disable-line no-console
         this.setState({ [`${name}loaded`]: true });
@@ -113,7 +118,7 @@ class Layout extends React.Component {
 
           return (
             <ThemeContext.Provider value={this.state.theme}>
-              <FontLoadedContext.Provider value={this.state.font400loaded}>
+              <FontLoadedContext.Provider value={this.state.font400_bodyloaded}>
                 <ScreenWidthContext.Provider value={this.state.screenWidth}>
                   <React.Fragment>
                     <Header
@@ -138,6 +143,12 @@ class Layout extends React.Component {
                       {`
                         html {
                           box-sizing: border-box;
+                          text-rendering: optimizeLegibility;
+                          overflow-x: hidden;
+                          -ms-overflow-style: scrollbar;
+                          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                          -webkit-font-smoothing: antialiased;
+                          -moz-osx-font-smoothing: grayscale;
                         }
                         *,
                         *:after,
@@ -147,17 +158,17 @@ class Layout extends React.Component {
                           padding: 0;
                         }
                         body {
-                          font-family: ${this.state.font400loaded
+                          font-family: ${this.state.font400_bodyloaded
                             ? "Poppins;"
-                            : "Arial, sans-serif;"};
+                            : "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';"};
                         }
                         h1,
                         h2,
                         h3 {
-                          font-family: ${this.state.font600loaded
-                            ? "IBM Plex mono;"
-                            : "Arial, sans-serif;"};
-                          font-weight: ${this.state.font600loaded ? 600 : 600};
+                          font-family: ${this.state.font600_headerloaded
+                            ? "IBM Plex Mono;"
+                            : "'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier', 'monospace';"};
+                          font-weight: ${this.state.font600_headerloaded ? 600 : 600};
                           line-height: 1.5;
                           letter-spacing: -0.035em;
                           margin: 0;
@@ -169,7 +180,7 @@ class Layout extends React.Component {
                           margin: 0;
                         }
                         strong {
-                          font-weight: ${this.state.font600loaded ? 600 : 600};
+                          font-weight: ${this.state.font600_headerloaded ? 600 : 600};
                         }
                         a {
                           text-decoration: none;
@@ -202,6 +213,17 @@ class Layout extends React.Component {
                         }
                         ::webkit-scrollbar-thumb {
                           background-color: #5a67d8;
+                        }
+                        div.gatsby-remark-code-title {
+                          font-family: ${this.state.font400_headerloaded
+                            ? "IBM Plex Mono;"
+                            : "'Consolas', 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', 'Monaco', 'Courier New', 'Courier', 'monospace';"};
+                        }
+                        code[class*="language-"],
+                        pre[class*="language-"] {
+                          font-family: ${this.state.font400_headerloaded
+                            ? "IBM Plex Mono;"
+                            : "'Consolas', 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', 'Monaco', 'Courier New', 'Courier', 'monospace';"};
                         }
                       `}
                     </style>

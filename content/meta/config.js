@@ -1,9 +1,9 @@
 module.exports = {
-  siteTitle: "M0Nk3y Webdev", // <title>
-  shortSiteTitle: "M0Nk3y WebDev - Frontend Web Development", // <title> ending for posts and pages
-  siteDescription: "M0Nk3y WebDev is a blog on front-end web development.",
+  siteTitle: "toddmath", // <title>
+  shortSiteTitle: "toddmath front end web development blog", // <title> ending for posts and pages
+  siteDescription: "toddmath.com is a blog about front end web development.",
   siteUrl: "https://toddmath.com",
-  // pathPrefix: "",
+  pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
 
@@ -13,11 +13,11 @@ module.exports = {
 
   /* info */
   headerTitle: "Todd Matheson",
-  headerSubTitle: "M0Nk3y WebDev",
+  headerSubTitle: "toddmath.com web dev blog",
 
   /* manifest.json */
-  manifestName: "M0Nk3y Webdev - a frontend blog",
-  manifestShortName: "M0Nk3y WebDev", // max 12 characters
+  manifestName: "toddmath.com Front End Web Development Blog",
+  manifestShortName: "toddmath.com", // max 12 characters
   manifestStartUrl: "/",
   manifestBackgroundColor: "#ecebea",
   manifestThemeColor: "#255DC6",
@@ -26,13 +26,14 @@ module.exports = {
 
   // gravatar
   // Use your Gravatar image. If empty then will use src/images/jpg/avatar.jpg
-  // Replace your email adress with md5-code.
+  // Replace your email address with md5-code.
   // Example https://www.gravatar.com/avatar/g.strainovic@gmail.com ->
   // gravatarImgMd5: "https://www.gravatar.com/avatar/1db853e4df386e8f699e4b35505dd8c6",
   gravatarImgMd5: "",
 
   // social
-  authorSocialLinks: [{
+  authorSocialLinks: [
+    {
       name: "github",
       url: "https://github.com/toddmath"
     },

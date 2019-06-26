@@ -65,7 +65,28 @@ const Bodytext = (props) => {
               text-shadow: none;
               color: inherit;
               padding: 0.1em 0.3em 0.2em;
+            }
+            :global(pre[class*="language-"]) {
               border-radius: ${theme.size.radius.default};
+            }
+            :global(div.gatsby-remark-code-title + div.gatsby-highlight > pre[class*="language-"]) {
+              border-top-left-radius: 0 !important;
+              border-top-right-radius: 0 !important;
+              border-bottom-left-radius: ${theme.size.radius.default};
+              border-bottom-right-radius: ${theme.size.radius.default};
+              margin-top: 0;
+            }
+            :global(div.gatsby-remark-code-title) {
+              margin-bottom: 0;
+              padding: 0.5rem 1em;
+              z-index: 0;
+              background-color: ${theme.color.neutral.gray.i};
+              color: ${theme.color.neutral.white};
+              border-top-left-radius: ${theme.size.radius.large};
+              border-top-right-radius: ${theme.size.radius.large};
+            }
+            :global(code[class*="language-"], pre[class*="language-"]) {
+              font-size: ${theme.font.size.s};
             }
           }
 

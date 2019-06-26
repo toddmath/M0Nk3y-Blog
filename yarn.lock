@@ -6290,6 +6290,14 @@ gatsby-plugin-netlify@^2.1.0:
     lodash "^4.17.10"
     webpack-assets-manifest "^3.0.2"
 
+gatsby-plugin-nprogress@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.1.0.tgz#1609b2db52b4131acbd433cb6335aea67c492a7d"
+  integrity sha512-E9ynVJMuxMGhpNecijxH4nx1SBMj4vR4H824YcLZC8ATao6Iz4jVzSYo6MnwtXUJeTjDDkPnvUhe0+HGGNjWGQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    nprogress "^0.2.0"
+
 gatsby-plugin-offline@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.2.0.tgz#b0ee8d3b7801df4c4ef1a6e8371d688d7776070f"
@@ -6380,13 +6388,6 @@ gatsby-plugin-styled-jsx@^3.1.0:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-twitter@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.1.0.tgz#6d23b29a93f6816180b750fb1efc88ff550ecccd"
-  integrity sha512-OTYzB4lRWBdQmDHehoViuTtIIEKPQ4PtK4vWFNYGEHUNdg4MGB8VmAhoFsPbkVKiV2rocVmEdvMtYkYXb9v/Pg==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-
 gatsby-react-router-scroll@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.1.0.tgz#4aa36e1e5a5d181cb70902ea7e801796b6c32a7e"
@@ -6395,6 +6396,25 @@ gatsby-react-router-scroll@^2.1.0:
     "@babel/runtime" "^7.0.0"
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
+
+gatsby-remark-autolink-headers@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.0.tgz#d6db90f234307f6a4711c89c609e2fd2d7ee433a"
+  integrity sha512-18pwSTZ11GoL08hll8kaMEtcd/HLL3/WlxxBjQvxmN4YznONVsjCnLGtmSWQmg16jJYYekrQH1A2cNf9qg6Ogg==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    github-slugger "^1.1.1"
+    lodash "^4.17.11"
+    mdast-util-to-string "^1.0.2"
+    unist-util-visit "^1.3.0"
+
+gatsby-remark-code-titles@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-code-titles/-/gatsby-remark-code-titles-1.1.0.tgz#1b7246e4ac78669c1ca7c18ea70c3dd11fede139"
+  integrity sha512-RuNqziXi99eBIj5NJP0TgdzAxzWFL+ArGRb3961Ff9Tto/nCvmyqR1qySaWKXtkOgeqoVUlqAFNUCyEAyNuc8w==
+  dependencies:
+    query-string "~6.0.0"
+    unist-util-visit "~1.3.0"
 
 gatsby-remark-copy-linked-files@^2.1.0:
   version "2.1.0"
@@ -10314,6 +10334,11 @@ npmlog@^4.0.1, npmlog@^4.0.2, npmlog@^4.1.2:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
+
 nth-check@^1.0.1, nth-check@^1.0.2, nth-check@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
@@ -12412,6 +12437,14 @@ query-string@^6.1.0:
   dependencies:
     decode-uri-component "^0.2.0"
     split-on-first "^1.0.0"
+    strict-uri-encode "^2.0.0"
+
+query-string@~6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.0.0.tgz#8b8f39447b73e8290d6f5e3581779218e9171142"
+  integrity sha1-i485RHtz6CkNb141gXeSGOkXEUI=
+  dependencies:
+    decode-uri-component "^0.2.0"
     strict-uri-encode "^2.0.0"
 
 querystring-es3@^0.2.0, querystring-es3@^0.2.1:
@@ -16110,6 +16143,13 @@ unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.3.0, unist
 unist-util-visit@^1.1.3:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.3.0.tgz#41ca7c82981fd1ce6c762aac397fc24e35711444"
+  dependencies:
+    unist-util-is "^2.1.1"
+
+unist-util-visit@~1.3.0:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.3.1.tgz#c019ac9337a62486be58531bc27e7499ae7d55c7"
+  integrity sha512-0fdB9EQJU0tho5tK0VzOJzAQpPv2LyLZ030b10GxuzAWEfvd54mpY7BMjQ1L69k2YNvL+SvxRzH0yUIehOO8aA==
   dependencies:
     unist-util-is "^2.1.1"
 

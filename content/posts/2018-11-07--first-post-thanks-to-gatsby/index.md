@@ -6,9 +6,9 @@ author: Todd Matheson
 ---
 ![Gatsby, Octocat & Netlify](gatsbyjs-deploy-blog.png)
 
-Welcome to my first blog post ✨!! After reading tons of cool blogs by other developers, and gaining all sorts of practical knowledge, it was a no-brainer for me to create one, as well. I hope you learn something that'll help you create your own web app, and enjoy reading my posts as I did writing them!
+Welcome to my first blog post ✨!! After reading tons of cool blogs by other developers, and gaining lots of practical knowledge, I decided to create one, as well. I hope you learn something that'll help you create your own web app, and enjoy reading my posts as I did writing them!
 
-Today, I'm gonna show you the steps I took to create this very site. After trying multiple different frameworks such as, [Jekyll](https://jekyllrb.com) 😉, [WordPress](https://wordpress.org/) 😉, and a few others, I finally landed on [Gatsby.js](https://www.gatsbyjs.org/). Although those former frameworks worked well and provided the necessary tools to create a nice blog, I felt they weren't flexible enough for what I was after, especially after starting to use [React.js](https://reactjs.org/), [Redux.js](https://redux.js.org/), and [Vue.js](https://vuejs.org/). [Gatsby's](https://www.gatsbyjs.org/) true strength lies in it's component based architect, while mainting static site builds, hence compatability with [Github Pages](https://pages.github.com/ "Github Pages Homepage")😼 , and other free static site web hosts. Another awesome benefit with [Gastsby](https://www.gatsbyjs.org/) is the ability to use [GraphQL](https://graphql.org), making it extremely flexible and capable.
+Today, I'm gonna show you the steps I took to create this site. After trying different frameworks such as, [Jekyll](https://jekyllrb.com) 😉, [WordPress](https://wordpress.org/) 😉, and others, I landed on [Gatsby.js](https://www.gatsbyjs.org/). Although those former frameworks worked well and provided the necessary tools to create a nice blog, after working with [React.js](https://reactjs.org/), [Redux.js](https://redux.js.org/), and [Vue.js](https://vuejs.org/), I wanted a component based framework. [Gatsby's](https://www.gatsbyjs.org/) true strength lies in it's component based architect, while mainting static site builds, hence compatability with [Github Pages](https://pages.github.com/ "Github Pages Homepage")😼 , and other free static site web hosts. Another awesome benefit with [Gastsby](https://www.gatsbyjs.org/) is the ability to use [GraphQL](https://graphql.org), making it both flexible and capable.
 
 ## Installing gatsby-cli
 
@@ -51,9 +51,9 @@ ls -lta
 gatsby develop
 ```
 
-3. There are a few important config files inside the root directory: gatsby-config.js being the main one. Here's what mine looks like:
+3. The main config is `gatsby-config.js`, located inside the root directory. Here's what mine looks like:
 
-```js
+```js:title=gatsby-config.js
 require("dotenv").config();
 const config = require("./content/meta/config");
 const transformer = require("./src/utils/algolia");
@@ -414,4 +414,4 @@ module.exports = {
 };
 ```
 
-> As you can see this file gets fairly long if you use some of the fantastic [Gastsby plugins](https://www.gatsbyjs.org/docs/plugins/) available. In order to keep my api keys and other private info out of my git repo, I've created a separate config.js file that's in my .gitignore file, and simply import it 😸.
+> As you can see this file gets rather long if you use some of the fantastic [Gastsby plugins](https://www.gatsbyjs.org/docs/plugins/) available. To keep my api keys and other private info out of my git repo, I've created a separate `.env` file. After adding it to `.gitignore`, I export the variables to Netlify.

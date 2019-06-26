@@ -102,6 +102,15 @@ module.exports = {
         path: `${__dirname}/content/parts/`
       }
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: "#4299e1",
+        showSpinner: false,
+        easing: "ease",
+        speed: 500
+      }
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -125,11 +134,18 @@ module.exports = {
               wrapperStyle: `margin-bottom: 2em`
             }
           },
+          {
+            resolve: `gatsby-remark-code-titles`,
+            options: {
+              className: "gatsby-remark-code-title"
+            }
+          },
           `gatsby-remark-vscode-embed`,
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              inlineCodeMarker: ">",
+              inlineCodeMarker: "†",
               aliases: {
                 sh: "bash",
                 js: "javascript"
